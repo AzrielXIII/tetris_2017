@@ -5,13 +5,14 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Sat Feb 25 15:24:42 2017 Mohan Grewis
+## Last update Sat Feb 25 15:51:04 2017 Mohan Grewis
 ##
-CC		=	gcc
+CC			=	gcc
 
-SRC		=	src/main.c
+SRC			=	src/main.c		\
+				src/parsing.c
 
-OBJ		=	$(SRC:.c=.o)
+OBJ			=	$(SRC:.c=.o)
 
 NAME		=	tetris
 
