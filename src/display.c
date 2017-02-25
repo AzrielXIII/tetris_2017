@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Sat Feb 25 16:21:47 2017 Thomas Dominé
+** Last update Sat Feb 25 16:44:58 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -24,7 +24,8 @@ void		display()
 		clear();
 		mvprintw(LINES / 2, COLS / 2 - 8, "J'aime les pates");
 		refresh();
-		if (getch() == 'P')
+		if (getch() == '\n')
 		i = 1;
 	}
+	endwin();
 }
