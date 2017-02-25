@@ -5,12 +5,13 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Sat Feb 25 15:51:04 2017 Mohan Grewis
+## Last update Sat Feb 25 17:20:11 2017 Mohan Grewis
 ##
 CC			=	gcc
 
 SRC			=	src/main.c		\
-				src/parsing.c
+				src/parsing.c	\
+				src/display.c
 
 OBJ			=	$(SRC:.c=.o)
 
@@ -20,21 +21,26 @@ LIBPRINTF	=	make -C ./lib/my_printf
 
 LIBGNL		=	make -C ./lib/my_gnl
 
+LIBBASE		=	make -C ./lib/base
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(LIBPRINTF)
+	$(LIBBASE)
 	$(LIBGNL)
-	gcc -o $(NAME) $(OBJ) -L./lib -lprintf -lgnl
+	gcc -o $(NAME) $(OBJ) -L./lib -lprintf -lgnl -lbase -lncurses
 
 clean:
 	rm -f $(OBJ)
 	$(LIBPRINTF) clean
+	$(LIBBASE) clean
 	$(LIBGNL) clean
 
 fclean: clean
 	rm -f $(NAME)
 	rm -f lib/libprintf.a
+	rm -f lib/libbase.a
 	rm -f lib/libgnl.a
 
 re: fclean all
