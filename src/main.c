@@ -5,11 +5,12 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:40:49 2017 Mohan Grewis
-** Last update Sat Feb 25 15:24:52 2017 Mohan Grewis
+** Last update Sat Feb 25 16:00:19 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
 
 int			main(int ac, char **av)
 {
+	display();
 }
