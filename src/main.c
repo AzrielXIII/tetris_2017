@@ -5,22 +5,33 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:40:49 2017 Mohan Grewis
-** Last update Sat Feb 25 17:18:04 2017 Mohan Grewis
+** Last update Mon Feb 27 14:57:39 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
 
 int				main(int ac, char **av)
 {
-	t_tetrimino	*brick;
+	t_list		*list;
 	int			i;
 
-	i = 0;
-	brick = parsing_tetrimino(av[1]);
-	my_printf("%s\n", brick->name);
-	while (brick->shape[i] != NULL)
+	list = tetrimino_collector("tetriminos");
+	while (list != NULL)
 	{
-		my_printf("%s\n", brick->shape[i]);
-		i += 1;
+		i = 0;
+		if (list->brick == NULL)
+		{
+			my_printf("%s : Error\n", list->name);
+		}
+		else
+		{
+			my_printf("%s\n", list->name);
+			while (list->brick->shape[i] != NULL)
+			{
+				my_printf("%s\n", list->brick->shape[i]);
+				i += 1;
+			}
+		}
+		list = list->next;
 	}
 }

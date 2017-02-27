@@ -5,12 +5,12 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:44:19 2017 Mohan Grewis
-** Last update Sat Feb 25 17:11:57 2017 Mohan Grewis
+** Last update Mon Feb 27 14:39:25 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
 
-static int		my_strlen(char *str)
+int		my_strlen(char *str)
 {
 	int	i;
 
@@ -20,7 +20,7 @@ static int		my_strlen(char *str)
 	return (i);
 }
 
-static int		my_get_nbr(char *str, int *i)
+int		my_get_nbr(char *str, int *i)
 {
   int	nb;
 
@@ -87,12 +87,11 @@ t_tetrimino		*parsing_tetrimino(char *path)
 		return (NULL);
 	if ((brick = first_line_handler(fd, brick)) == NULL)
 		return (NULL);
-	brick->name = name_collector(path);
 	brick->shape = malloc(sizeof(char *) * (brick->height + 1));
 	while (i < brick->height)
 	{
 		str = get_next_line(fd);
-		if (my_strlen(str) > brick->width)
+		if (my_strlen(str) - space_counter(str) > brick->width)
 			return (NULL);
 		brick->shape[i] = str;
 		i = i + 1;
