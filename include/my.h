@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Mon Feb 27 15:19:04 2017 Mohan Grewis
+** Last update Wed Mar  1 09:44:36 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -34,12 +34,26 @@ typedef	struct	s_list
 	struct s_list	*prev;
 }				t_list;
 
+typedef struct	s_all
+{
+	int			level;
+	int			key_left;
+	int			key_right;
+	int			key_turn;
+	int			key_drop;
+	int			key_quit;
+	int			key_pause;
+	int			enable_next;
+	int			size_width;
+	int			size_height;
+}				t_all;
+
 typedef struct	s_flags
 {
-  char			*flags;
-  void			(*ptrfonct)(va_list ap, int *rnb);
-}				t_flags;
-
+	char			*flags;
+	void			(*ptrfonct)(t_all all, t_list list, char **argv, int i);
+}
+				t_flags;
 int			my_printf(char *str, ...);
 char		*get_next_line(const int fd);
 t_tetrimino	*parsing_tetrimino(char *path);
