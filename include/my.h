@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Wed Mar  1 09:44:36 2017 Mohan Grewis
+** Last update Wed Mar  1 16:06:45 2017 Thomas Dominé
 */
 
 #include <fcntl.h>
@@ -48,17 +48,24 @@ typedef struct	s_all
 	int			size_height;
 }				t_all;
 
+typedef	struct	s_data
+{
+	char	**s_tab;
+	int	score;
+	char	**next;
+}		t_data;
+
 typedef struct	s_flags
 {
 	char			*flags;
 	void			(*ptrfonct)(t_all all, t_list list, char **argv, int i);
-}
-				t_flags;
-int			my_printf(char *str, ...);
-char		*get_next_line(const int fd);
-t_tetrimino	*parsing_tetrimino(char *path);
-void 		display();
-int			space_counter(char *str);
-int			my_strlen(char *str);
-t_list		*tetrimino_collector(char *path);
-char		*name_collector(char *path);
+}				t_flags;
+
+void display();
+int my_strlen(char *str);
+int space_counter(char *str);
+int my_printf(char *str, ...);
+char *name_collector(char *path);
+char *get_next_line(const int fd);
+t_list *tetrimino_collector(char *path);
+t_tetrimino *parsing_tetrimino(char *path);
