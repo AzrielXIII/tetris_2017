@@ -5,10 +5,32 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 13:44:48 2017 Mohan Grewis
-** Last update Tue Mar  7 14:47:05 2017 Mohan Grewis
+** Last update Tue Mar  7 15:11:28 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
+
+int		space_counter(char *str)
+{
+	int	i;
+	int	a;
+
+	a = 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == ' ')
+			a += 1;
+		i += 1;
+	}
+	return (a);
+}
+
+void 	print_term_key(char *key)
+{
+	if (key[0] == 27)
+	my_printf("^E%s\n", key + 1);
+}
 
 int		my_strcmp(char *str1, char *str2)
 {
@@ -38,5 +60,5 @@ void 		setup_term(char **ae)
 	}
 	str = tigetstr("smkx");
 	if (str != NULL)
-		putp(str);
+		my_printf("%s", str);
 }

@@ -5,26 +5,10 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Mon Feb 27 11:04:55 2017 Mohan Grewis
-** Last update Mon Feb 27 14:59:10 2017 Mohan Grewis
+** Last update Tue Mar  7 15:12:29 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
-
-int		space_counter(char *str)
-{
-	int	i;
-	int	a;
-
-	a = 0;
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == ' ')
-			a += 1;
-		i += 1;
-	}
-	return (a);
-}
 
 char		*path_compressor(char *path, char *file)
 {

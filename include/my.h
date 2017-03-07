@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Tue Mar  7 14:33:27 2017 Mohan Grewis
+** Last update Tue Mar  7 15:11:39 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -54,7 +54,7 @@ typedef	struct	s_data
 	char	**s_tab;
 	int	score;
 	char	**next;
-}		t_data;
+}				t_data;
 
 typedef struct	s_flags
 {
@@ -62,6 +62,8 @@ typedef struct	s_flags
 	void			(*ptrfonct)(t_all all, t_list list, char **argv, int i);
 }				t_flags;
 
+int			space_counter(char *str);
+void 		print_term_key(char *key);
 int			my_printf(char *str, ...);
 char		*get_next_line(const int fd);
 t_tetrimino	*parsing_tetrimino(char *path);

@@ -5,16 +5,10 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  1 14:47:53 2017 Mohan Grewis
-** Last update Tue Mar  7 14:57:29 2017 Mohan Grewis
+** Last update Tue Mar  7 15:09:21 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
-
-void 	print_term_key(char *key)
-{
-	if (key[0] == 27)
-	my_printf("^E%s\n", key + 1);
-}
 
 void	print_key(int key)
 {
