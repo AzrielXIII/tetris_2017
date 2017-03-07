@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Tue Mar  7 13:53:34 2017 Mohan Grewis
+** Last update Tue Mar  7 13:55:38 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -48,6 +48,13 @@ typedef struct	s_all
 	int			size_width;
 	int			size_height;
 }				t_all;
+
+typedef	struct	s_data
+{
+	char	**s_tab;
+	int	score;
+	char	**next;
+}		t_data;
 
 typedef struct	s_flags
 {
