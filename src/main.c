@@ -5,16 +5,17 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:40:49 2017 Mohan Grewis
-** Last update Tue Mar  7 13:56:57 2017 Mohan Grewis
+** Last update Tue Mar  7 14:07:41 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
 
-int				main(int ac, char **av)
+int				main(int ac, char **av, char **ae)
 {
 	t_list		*tetrimino;
 	t_all		*all;
 
+	setup_term(ae);
 	tetrimino = tetrimino_collector("tetriminos");
 	all = set_default();
 	debug(all, tetrimino);

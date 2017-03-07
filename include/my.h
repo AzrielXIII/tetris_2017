@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Tue Mar  7 13:55:38 2017 Mohan Grewis
+** Last update Tue Mar  7 14:33:27 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -17,7 +17,7 @@
 #include <ncurses.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include "term.h"
+#include <term.h>
 
 typedef	struct	s_tetrimino
 {
@@ -74,3 +74,4 @@ void		debug(t_all *all, t_list *list);
 void		print_tetrimino_alpha(t_list *list);
 int			count_tetrimino(t_list *list);
 t_all		*set_default();
+void 		setup_term(char **ae);

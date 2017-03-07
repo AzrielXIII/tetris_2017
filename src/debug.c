@@ -5,10 +5,16 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  1 14:47:53 2017 Mohan Grewis
-** Last update Tue Mar  7 13:53:53 2017 Mohan Grewis
+** Last update Tue Mar  7 14:57:29 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
+
+void 	print_term_key(char *key)
+{
+	if (key[0] == 27)
+	my_printf("^E%s\n", key + 1);
+}
 
 void	print_key(int key)
 {
@@ -17,13 +23,13 @@ void	print_key(int key)
 	else if (key == ' ')
 	my_printf("(space)\n");
 	else if (key == KEY_LEFT)
-	my_printf("KEY_LEFT\n");
+	print_term_key(tigetstr("kcub1"));
 	else if (key == KEY_RIGHT)
-	my_printf("KEY_RIGHT\n");
+	print_term_key(tigetstr("kcuf1"));
 	else if (key == KEY_UP)
-	my_printf("KEY_UP\n");
+	print_term_key(tigetstr("kcuu1"));
 	else if (key == KEY_DOWN)
-	my_printf("KEY_DOWN\n");
+	print_term_key(tigetstr("kcud1"));
 	else
 	my_printf("UNKWNOW\n");
 }
