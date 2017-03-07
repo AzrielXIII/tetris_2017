@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Wed Mar  1 09:44:36 2017 Mohan Grewis
+** Last update Tue Mar  7 13:53:34 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -17,6 +17,7 @@
 #include <ncurses.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include "term.h"
 
 typedef	struct	s_tetrimino
 {
@@ -37,8 +38,8 @@ typedef	struct	s_list
 typedef struct	s_all
 {
 	int			level;
-	int			key_left;
-	int			key_right;
+	int			my_key_left;
+	int			my_key_right;
 	int			key_turn;
 	int			key_drop;
 	int			key_quit;
@@ -52,8 +53,8 @@ typedef struct	s_flags
 {
 	char			*flags;
 	void			(*ptrfonct)(t_all all, t_list list, char **argv, int i);
-}
-				t_flags;
+}				t_flags;
+
 int			my_printf(char *str, ...);
 char		*get_next_line(const int fd);
 t_tetrimino	*parsing_tetrimino(char *path);
@@ -62,3 +63,7 @@ int			space_counter(char *str);
 int			my_strlen(char *str);
 t_list		*tetrimino_collector(char *path);
 char		*name_collector(char *path);
+void		debug(t_all *all, t_list *list);
+void		print_tetrimino_alpha(t_list *list);
+int			count_tetrimino(t_list *list);
+t_all		*set_default();
