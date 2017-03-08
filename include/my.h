@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Wed Mar  8 11:51:28 2017 Mohan Grewis
+** Last update Wed Mar  8 15:39:02 2017 Thomas Dominé
 */
 
 #include <fcntl.h>
@@ -64,34 +64,39 @@ typedef struct	s_flags
 	int				(*ptrfonct)(t_all *all, t_list *list, char **argv, int i);
 }				t_flags;
 
-int			my_strcmp(char *str1, char *str2);
-int			space_counter(char *str);
-void 		print_term_key(char *key);
-int			my_printf(char *str, ...);
-char		*get_next_line(const int fd);
-t_tetrimino	*parsing_tetrimino(char *path);
-void 		display();
-int			space_counter(char *str);
-int			my_strlen(char *str);
-t_list		*tetrimino_collector(char *path);
-char		*name_collector(char *path);
-int			debug(t_all *all, t_list *list, char **argv, int i);
-void		print_tetrimino_alpha(t_list *list);
-int			count_tetrimino(t_list *list);
 t_all		*set_default();
+int		my_strlen(char *str);
 void 		setup_term(char **ae);
-char		*str_extractor_malloc(char *str);
+int		space_counter(char *str);
+int		space_counter(char *str);
+void 		print_term_key(char *key);
+int		my_printf(char *str, ...);
 char 		*str_extractor(char *str);
+char		*name_collector(char *path);
+char		*get_next_line(const int fd);
+int		count_tetrimino(t_list *list);
+t_tetrimino	*parsing_tetrimino(char *path);
+t_list		*tetrimino_collector(char *path);
+char		*str_extractor_malloc(char *str);
+int		my_strcmp(char *str1, char *str2);
+void		print_tetrimino_alpha(t_list *list);
+int		debug(t_all *all, t_list *list, char **argv, int i);
 
-int			key_left_set_long(t_all *all, t_list *list, char **argv, int i);
-int			debug_set(t_all *all, t_list *list, char **argv, int i);
-int			help(t_all *all, t_list *list, char **argv, int i);
-int			level_set_short(t_all *all, t_list *list, char **argv, int i);
-int			level_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_left_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_right_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_drop_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_turn_set_short(t_all *all, t_list *list, char **argv, int i);
+int	help(t_all *all, t_list *list, char **argv, int i);
+int	debug_set(t_all *all, t_list *list, char **argv, int i);
+int	level_set_long(t_all *all, t_list *list, char **argv, int i);
+int	level_set_short(t_all *all, t_list *list, char **argv, int i);
+int	key_left_set_long(t_all *all, t_list *list, char **argv, int i);
+int	key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
+int	key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
+int	key_right_set_long(t_all *all, t_list *list, char **argv, int i);
+int	key_left_set_short(t_all *all, t_list *list, char **argv, int i);
+int	key_drop_set_short(t_all *all, t_list *list, char **argv, int i);
+int	key_turn_set_short(t_all *all, t_list *list, char **argv, int i);
+int	key_right_set_short(t_all *all, t_list *list, char **argv, int i);
+
+void display();
+int color_init();
+int my_get_nbr(char *str);
+void print_x_to_x(int x1, int x2, int y);
+void print_y_to_y(int y1, int y2, int x);

@@ -5,23 +5,10 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Wed Mar  1 17:22:31 2017 Thomas Dominé
+** Last update Wed Mar  8 15:20:08 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
-
-void		init()
-{
-	initscr();
-	start_color();
-	init_pair(1, COLOR_RED, COLOR_RED);
-	init_pair(2, COLOR_GREEN, COLOR_GREEN);
-	init_pair(3, COLOR_YELLOW, COLOR_YELLOW);
-	init_pair(4, COLOR_BLUE, COLOR_BLUE);
-	init_pair(5, COLOR_MAGENTA, COLOR_MAGENTA);
-	init_pair(6, COLOR_CYAN, COLOR_CYAN);
-	init_pair(7, COLOR_WHITE, COLOR_WHITE);
-}
 
 void		exemple()
 {
@@ -49,15 +36,13 @@ void		display()
 	initscr();
 	curs_set(0);
 	i = 0;
-	init();
 	while (i != 1)
 	{
 		keypad(stdscr, TRUE);
 		i = 0;
 		clear();
-		exemple();
 		refresh();
-		if (getch() == '\n')
+		if (getch() == 27)
 		i = 1;
 	}
 	endwin();

@@ -5,21 +5,25 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Wed Mar  8 11:53:11 2017 Mohan Grewis
+## Last update Wed Mar  8 15:39:59 2017 Thomas Dominé
 ##
 CC			=	gcc
 
 SRC			=	src/main.c		\
-				src/parsing.c	\
-				src/display.c	\
-				src/parsing2.c	\
+				src/parsing.c		\
+				src/display.c		\
+				src/parsing2.c		\
 				src/debug.c		\
-				src/debug2.c	\
+				src/debug2.c		\
 				src/term.c		\
-				src/params.c	\
-				src/params2.c	\
-				src/params3.c	\
-				src/params4.c
+				src/params.c		\
+				src/params2.c		\
+				src/params3.c		\
+				src/params4.c		\
+				src/color_init.c	\
+				src/print_x_to_x.c	\
+				src/print_y_to_y.c	\
+				src/my_get_nbr.c
 
 OBJ			=	$(SRC:.c=.o)
 
