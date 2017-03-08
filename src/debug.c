@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  1 14:47:53 2017 Mohan Grewis
-** Last update Tue Mar  7 15:09:21 2017 Mohan Grewis
+** Last update Tue Mar  7 16:21:17 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -40,7 +40,7 @@ void	print_tetrimino(t_tetrimino *brick)
 	int	i;
 
 	i = 0;
-	my_printf("Size %d*%d :  ", brick->width, brick->height);
+	my_printf("Size %d*%d : ", brick->width, brick->height);
 	my_printf("Color %d :\n", brick->color);
 	while (brick->shape[i] != NULL)
 	{
@@ -61,7 +61,7 @@ void		print_tetrimino_alpha(t_list *list)
 			list = list->next;
 			if (list->name[0] == a)
 			{
-				my_printf("Tetriminos :  Name %s :  ", list->name);
+				my_printf("Tetriminos : Name %s : ", list->name);
 				if (list->brick != NULL)
 					print_tetrimino(list->brick);
 				else
@@ -74,27 +74,28 @@ void		print_tetrimino_alpha(t_list *list)
 
 }
 
-void	debug(t_all *all, t_list *list)
+int		debug(t_all *all, t_list *list, char **argv, int i)
 {
 	my_printf("*** DEBUG MODE ***\n");
-	my_printf("Key Left :  ");
+	my_printf("Key Left : ");
 	print_key(all->my_key_left);
-	my_printf("Key Right :  ");
+	my_printf("Key Right : ");
 	print_key(all->my_key_right);
-	my_printf("Key Turn :  ");
+	my_printf("Key Turn : ");
 	print_key(all->key_turn);
-	my_printf("Key Drop :  ");
+	my_printf("Key Drop : ");
 	print_key(all->key_drop);
-	my_printf("Key Quit :  ");
+	my_printf("Key Quit : ");
 	print_key(all->key_quit);
-	my_printf("Key Pause :  ");
+	my_printf("Key Pause : ");
 	print_key(all->key_pause);
 	if (all->enable_next == 1)
-		my_printf("Next :  Yes\n");
+		my_printf("Next : Yes\n");
 	else
-		my_printf("Next :  No\n");
-	my_printf("Level :  %d\n", all->level);
-	my_printf("Size :  %d*%d\n", all->size_height, all->size_width);
-	my_printf("Tetriminos :  %d\n", count_tetrimino(list));
+		my_printf("Next : No\n");
+	my_printf("Level : %d\n", all->level);
+	my_printf("Size : %d*%d\n", all->size_height, all->size_width);
+	my_printf("Tetriminos : %d\n", count_tetrimino(list));
 	print_tetrimino_alpha(list);
+	return (i);
 }

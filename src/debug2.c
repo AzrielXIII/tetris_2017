@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 12:42:46 2017 Mohan Grewis
-** Last update Tue Mar  7 13:54:04 2017 Mohan Grewis
+** Last update Wed Mar  8 11:17:19 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -31,12 +31,14 @@ t_all		*set_default()
 	all->level = 1;
 	all->my_key_left = KEY_LEFT;
 	all->my_key_right = KEY_RIGHT;
-	all->key_turn = ' ';
-	all->key_drop = 'x';
+	all->key_turn = KEY_UP;
+	all->key_drop = KEY_DOWN;
 	all->key_quit = 'q';
-	all->key_pause = 'p';
+	all->key_pause = ' ';
 	all->enable_next = 1;
 	all->size_width = 10;
 	all->size_height = 20;
+	all->debug = 0;
+	all->help = 0;
 	return (all);
 }
