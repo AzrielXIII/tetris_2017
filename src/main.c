@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:40:49 2017 Mohan Grewis
-** Last update Wed Mar  8 14:10:07 2017 Mohan Grewis
+** Last update Wed Mar  8 15:49:24 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -64,4 +64,5 @@ int				main(int ac, char **av, char **ae)
 	flags_handler(av, ac, all, tetrimino);
 	if (all->debug == 1)
 		debug(all, tetrimino, av, 0);
+	//display();
 }

@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:44:19 2017 Mohan Grewis
-** Last update Mon Feb 27 14:39:25 2017 Mohan Grewis
+** Last update Wed Mar  8 15:47:32 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -20,7 +20,7 @@ int		my_strlen(char *str)
 	return (i);
 }
 
-int		my_get_nbr(char *str, int *i)
+int		my_get_nbr_v2(char *str, int *i)
 {
   int	nb;
 
@@ -45,11 +45,11 @@ t_tetrimino		*first_line_handler(int fd, t_tetrimino *brick)
 	str = get_next_line(fd);
 	if (str == NULL)
 		return (NULL);
-	brick->width = my_get_nbr(str, &i);
+	brick->width = my_get_nbr_v2(str, &i);
 	i = i + 1;
-	brick->height = my_get_nbr(str, &i);
+	brick->height = my_get_nbr_v2(str, &i);
 	i = i + 1;
-	brick->color = my_get_nbr(str, &i);
+	brick->color = my_get_nbr_v2(str, &i);
 	if (brick->width <= 0 || brick->height <= 0 || brick->color < 0)
 		return (NULL);
 	return (brick);
