@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Wed Mar  8 11:51:28 2017 Mohan Grewis
+** Last update Wed Mar  8 15:36:02 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -21,7 +21,11 @@
 
 typedef	struct	s_tetrimino
 {
+	int					current_shape;
 	char				**shape;
+	char				**shape90;
+	char				**shape180;
+	char				**shape270;
 	int					width;
 	int					height;
 	int					color;
@@ -95,3 +99,9 @@ int			key_drop_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_turn_set_short(t_all *all, t_list *list, char **argv, int i);
+int			key_quit_set_short(t_all *all, t_list *list, char **argv, int i);
+int			key_quit_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i);
+int			key_pause_set_long(t_all *all, t_list *list, char **argv, int i);
+int			cols_and_rows_set(t_all *all, t_list *list, char **argv, int i);
+int			set_next(t_all *all, t_list *list, char **argv, int i);

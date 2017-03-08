@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  1 14:47:53 2017 Mohan Grewis
-** Last update Tue Mar  7 16:21:17 2017 Mohan Grewis
+** Last update Wed Mar  8 14:05:13 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -94,7 +94,7 @@ int		debug(t_all *all, t_list *list, char **argv, int i)
 	else
 		my_printf("Next : No\n");
 	my_printf("Level : %d\n", all->level);
-	my_printf("Size : %d*%d\n", all->size_height, all->size_width);
+	my_printf("Size : %d*%d\n", all->size_width, all->size_height);
 	my_printf("Tetriminos : %d\n", count_tetrimino(list));
 	print_tetrimino_alpha(list);
 	return (i);

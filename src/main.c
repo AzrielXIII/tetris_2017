@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:40:49 2017 Mohan Grewis
-** Last update Wed Mar  8 11:52:51 2017 Mohan Grewis
+** Last update Wed Mar  8 14:10:07 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -24,6 +24,13 @@ t_flags		my_flags[] = {
 	{"--key-drop", key_drop_set_long},
 	{"-kt", key_turn_set_short},
 	{"--key-turn", key_turn_set_long},
+	{"-kq", key_quit_set_short},
+	{"--key-quit", key_quit_set_long},
+	{"-kp", key_pause_set_short},
+	{"--key-pause", key_pause_set_long},
+	{"--map-size=", cols_and_rows_set},
+	{"-w", set_next},
+	{"--without-next", set_next},
 	{NULL, NULL}
 };
 
