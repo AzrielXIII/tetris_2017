@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Wed Mar  8 11:47:13 2017 Mohan Grewis
+** Last update Wed Mar  8 11:51:28 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -93,3 +93,5 @@ int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_right_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_drop_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_turn_set_short(t_all *all, t_list *list, char **argv, int i);

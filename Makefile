@@ -5,7 +5,7 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Wed Mar  8 11:42:07 2017 Mohan Grewis
+## Last update Wed Mar  8 11:53:11 2017 Mohan Grewis
 ##
 CC			=	gcc
 
@@ -18,7 +18,8 @@ SRC			=	src/main.c		\
 				src/term.c		\
 				src/params.c	\
 				src/params2.c	\
-				src/params3.c
+				src/params3.c	\
+				src/params4.c
 
 OBJ			=	$(SRC:.c=.o)
 
