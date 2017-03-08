@@ -5,12 +5,13 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  8 11:40:26 2017 Mohan Grewis
-** Last update Wed Mar  8 11:47:15 2017 Mohan Grewis
+** Last update Wed Mar  8 16:00:50 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
 
-int			key_right_set_short(t_all *all, t_list *list, char **argv, int i)
+int			key_right_set_short(t_all *all, t_list *list,
+	 char **argv, int i)
 {
 	i = i + 1;
 	if (argv[i][1] != '\0')

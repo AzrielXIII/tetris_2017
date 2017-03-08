@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  8 13:39:57 2017 Mohan Grewis
-** Last update Wed Mar  8 14:08:58 2017 Mohan Grewis
+** Last update Wed Mar  8 16:00:51 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -26,7 +26,8 @@ static int	my_get_nbr(char *str, int *i)
 	return (nb);
 }
 
-int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i)
+int			key_pause_set_short(t_all *all, t_list *list,
+	 char **argv, int i)
 {
 	i = i + 1;
 	if (argv[i][1] != '\0')
