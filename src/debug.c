@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  1 14:47:53 2017 Mohan Grewis
-** Last update Wed Mar  8 14:05:13 2017 Mohan Grewis
+** Last update Thu Mar  9 10:23:35 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -58,7 +58,6 @@ void		print_tetrimino_alpha(t_list *list)
 	{
 		while (list->next != NULL)
 		{
-			list = list->next;
 			if (list->name[0] == a)
 			{
 				my_printf("Tetriminos : Name %s : ", list->name);
@@ -67,11 +66,12 @@ void		print_tetrimino_alpha(t_list *list)
 				else
 					my_printf("Error\n");
 			}
+			list = list->next;
 		}
+		print_tetrimino_alpha_2(list, a);
 		list = my_rewind(list);
 		a += 1;
 	}
-
 }
 
 int		debug(t_all *all, t_list *list, char **argv, int i)
