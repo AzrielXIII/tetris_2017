@@ -5,15 +5,15 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Wed Mar  8 15:20:08 2017 Thomas Dominé
+** Last update Thu Mar  9 10:16:28 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
 
 void		exemple()
 {
-	int	i;
-	int	a;
+	int		i;
+	int		a;
 
 	i = 0;
 	a = 1;
@@ -31,18 +31,21 @@ void		exemple()
 
 void		display()
 {
-	int	i;
+	int		i;
+	t_data	*data;
 
 	initscr();
 	curs_set(0);
 	i = 0;
+	data = malloc(sizeof(t_data));
 	while (i != 1)
 	{
 		keypad(stdscr, TRUE);
 		i = 0;
 		clear();
+		score(data);
 		refresh();
-		if (getch() == 27)
+		if (getch() == '\n')
 		i = 1;
 	}
 	endwin();
