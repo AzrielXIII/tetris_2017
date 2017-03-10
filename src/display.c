@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Thu Mar  9 10:16:28 2017 Thomas Dominé
+** Last update Thu Mar  9 16:43:25 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -38,6 +38,7 @@ void		display()
 	curs_set(0);
 	i = 0;
 	data = malloc(sizeof(t_data));
+	data->score = 0;
 	while (i != 1)
 	{
 		keypad(stdscr, TRUE);

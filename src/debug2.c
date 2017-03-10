@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 12:42:46 2017 Mohan Grewis
-** Last update Wed Mar  8 11:17:19 2017 Mohan Grewis
+** Last update Thu Mar  9 10:22:06 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -41,4 +41,16 @@ t_all		*set_default()
 	all->debug = 0;
 	all->help = 0;
 	return (all);
+}
+
+void	print_tetrimino_alpha_2(t_list *list, char a)
+{
+	if (list->name[0] == a)
+	{
+		my_printf("Tetriminos : Name %s : ", list->name);
+		if (list->brick != NULL)
+			print_tetrimino(list->brick);
+		else
+			my_printf("Error\n");
+	}
 }

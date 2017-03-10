@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 15:17:18 2017 Mohan Grewis
-** Last update Wed Mar  8 11:43:31 2017 Mohan Grewis
+** Last update Thu Mar  9 10:24:32 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -55,7 +55,7 @@ static int	my_get_nbr(char *str)
 int		help(t_all *all, t_list *list, char **argv, int i)
 {
 	all->help = 1;
-	my_printf("Usage:  ./tetris [options]\n");
+	my_printf("Usage:  %s [options]\n", argv[0]);
 	my_printf("Options:\n");
 	my_printf("  --help                Display this help\n");
 	my_printf("  -l --level={num}      Start Tetris at level num (def: 1)\n");
