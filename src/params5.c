@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  8 13:39:57 2017 Mohan Grewis
-** Last update Wed Mar  8 16:00:51 2017 Mohan Grewis
+** Last update Sat Mar 11 13:44:32 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -30,13 +30,7 @@ int			key_pause_set_short(t_all *all, t_list *list,
 	 char **argv, int i)
 {
 	i = i + 1;
-	if (argv[i][1] != '\0')
-	{
-		if (all->help == 0)
-			help(all, list, argv, i);
-		exit(84);
-	}
-	all->key_pause = argv[i][0];
+	all->key_pause = argv[i];
 	return (i);
 }
 
@@ -45,13 +39,7 @@ int			key_pause_set_long(t_all *all, t_list *list, char **argv, int i)
 	char	*str;
 
 	str = str_extractor(argv[i]);
-	if (str[1] != '\0')
-	{
-		if (all->help == 0)
-			help(all, list, argv, i);
-		exit(84);
-	}
-	all->key_pause = str[0];
+	all->key_pause = str;
 	return (i);
 }
 

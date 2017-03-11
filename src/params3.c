@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  8 11:40:26 2017 Mohan Grewis
-** Last update Wed Mar  8 16:00:50 2017 Mohan Grewis
+** Last update Sat Mar 11 13:42:58 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -14,13 +14,7 @@ int			key_right_set_short(t_all *all, t_list *list,
 	 char **argv, int i)
 {
 	i = i + 1;
-	if (argv[i][1] != '\0')
-	{
-		if (all->help == 0)
-			help(all, list, argv, i);
-		exit(84);
-	}
-	all->my_key_right = argv[i][0];
+	all->my_key_right = argv[i];
 	return (i);
 }
 
@@ -29,26 +23,14 @@ int			key_right_set_long(t_all *all, t_list *list, char **argv, int i)
 	char	*str;
 
 	str = str_extractor(argv[i]);
-	if (str[1] != '\0')
-	{
-		if (all->help == 0)
-			help(all, list, argv, i);
-		exit(84);
-	}
-	all->my_key_right = str[0];
+	all->my_key_right = str;
 	return (i);
 }
 
 int			key_drop_set_short(t_all *all, t_list *list, char **argv, int i)
 {
 	i = i + 1;
-	if (argv[i][1] != '\0')
-	{
-		if (all->help == 0)
-			help(all, list, argv, i);
-		exit(84);
-	}
-	all->key_drop = argv[i][0];
+	all->key_drop = argv[i];
 	return (i);
 }
 
@@ -57,12 +39,6 @@ int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i)
 	char	*str;
 
 	str = str_extractor(argv[i]);
-	if (str[1] != '\0')
-	{
-		if (all->help == 0)
-			help(all, list, argv, i);
-		exit(84);
-	}
-	all->key_drop = str[0];
+	all->key_drop = str;
 	return (i);
 }

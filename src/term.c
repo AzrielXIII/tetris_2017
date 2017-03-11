@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 13:44:48 2017 Mohan Grewis
-** Last update Tue Mar  7 15:11:28 2017 Mohan Grewis
+** Last update Sat Mar 11 13:56:46 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -30,6 +30,8 @@ void 	print_term_key(char *key)
 {
 	if (key[0] == 27)
 	my_printf("^E%s\n", key + 1);
+	else
+	my_printf("%s\n", key);
 }
 
 int		my_strcmp(char *str1, char *str2)

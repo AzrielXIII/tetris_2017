@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 12:42:46 2017 Mohan Grewis
-** Last update Thu Mar  9 10:22:06 2017 Mohan Grewis
+** Last update Sat Mar 11 13:51:34 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -29,12 +29,12 @@ t_all		*set_default()
 
 	all = malloc(sizeof(t_all));
 	all->level = 1;
-	all->my_key_left = KEY_LEFT;
-	all->my_key_right = KEY_RIGHT;
-	all->key_turn = KEY_UP;
-	all->key_drop = KEY_DOWN;
-	all->key_quit = 'q';
-	all->key_pause = ' ';
+	all->my_key_left = tigetstr("kcub1");
+	all->my_key_right = tigetstr("kcuf1");
+	all->key_turn = tigetstr("kcuu1");
+	all->key_drop = tigetstr("kcud1");
+	all->key_quit = "q";
+	all->key_pause = " ";
 	all->enable_next = 1;
 	all->size_width = 10;
 	all->size_height = 20;

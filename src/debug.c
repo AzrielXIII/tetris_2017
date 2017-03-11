@@ -5,28 +5,10 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  1 14:47:53 2017 Mohan Grewis
-** Last update Thu Mar  9 10:23:35 2017 Mohan Grewis
+** Last update Sat Mar 11 14:01:50 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
-
-void	print_key(int key)
-{
-	if (key >= 0 && key <= 255 && key != ' ')
-	my_printf("%c\n", key);
-	else if (key == ' ')
-	my_printf("(space)\n");
-	else if (key == KEY_LEFT)
-	print_term_key(tigetstr("kcub1"));
-	else if (key == KEY_RIGHT)
-	print_term_key(tigetstr("kcuf1"));
-	else if (key == KEY_UP)
-	print_term_key(tigetstr("kcuu1"));
-	else if (key == KEY_DOWN)
-	print_term_key(tigetstr("kcud1"));
-	else
-	my_printf("UNKWNOW\n");
-}
 
 t_list	*my_rewind(t_list *list)
 {
@@ -78,17 +60,17 @@ int		debug(t_all *all, t_list *list, char **argv, int i)
 {
 	my_printf("*** DEBUG MODE ***\n");
 	my_printf("Key Left : ");
-	print_key(all->my_key_left);
+	print_term_key(all->my_key_left);
 	my_printf("Key Right : ");
-	print_key(all->my_key_right);
+	print_term_key(all->my_key_right);
 	my_printf("Key Turn : ");
-	print_key(all->key_turn);
+	print_term_key(all->key_turn);
 	my_printf("Key Drop : ");
-	print_key(all->key_drop);
+	print_term_key(all->key_drop);
 	my_printf("Key Quit : ");
-	print_key(all->key_quit);
+	print_term_key(all->key_quit);
 	my_printf("Key Pause : ");
-	print_key(all->key_pause);
+	print_term_key(all->key_pause);
 	if (all->enable_next == 1)
 		my_printf("Next : Yes\n");
 	else
