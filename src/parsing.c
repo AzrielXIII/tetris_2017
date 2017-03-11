@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:44:19 2017 Mohan Grewis
-** Last update Wed Mar  8 15:47:32 2017 Mohan Grewis
+** Last update Sat Mar 11 15:29:55 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -88,14 +88,17 @@ t_tetrimino		*parsing_tetrimino(char *path)
 	if ((brick = first_line_handler(fd, brick)) == NULL)
 		return (NULL);
 	brick->shape = malloc(sizeof(char *) * (brick->height + 1));
-	while (i < brick->height)
+	while ((str = get_next_line(fd)) != NULL)
 	{
-		str = get_next_line(fd);
+		if (i + 1 > brick->height)
+		return (NULL);
 		if (my_strlen(str) - space_counter(str) > brick->width)
 			return (NULL);
 		brick->shape[i] = str;
 		i = i + 1;
 	}
+	if (brick->height > i)
+		return (NULL);
 	brick->shape[i] = NULL;
 	return (brick);
 }

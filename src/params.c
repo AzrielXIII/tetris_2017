@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 15:17:18 2017 Mohan Grewis
-** Last update Thu Mar  9 10:24:32 2017 Mohan Grewis
+** Last update Sat Mar 11 15:37:19 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -84,6 +84,12 @@ int		level_set_short(t_all *all, t_list *list, char **argv, int i)
 
 	nb = 0;
 	i = i + 1;
+	if (argv[i] == NULL)
+	{
+		if (all->help == 0)
+			help(all, list, argv, i);
+		exit(84);
+	}
 	if ((nb = my_get_nbr(argv[i])) == -1)
 	{
 		if (all->help == 0)

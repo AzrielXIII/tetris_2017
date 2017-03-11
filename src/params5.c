@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  8 13:39:57 2017 Mohan Grewis
-** Last update Sat Mar 11 13:44:32 2017 Mohan Grewis
+** Last update Sat Mar 11 15:38:46 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -30,6 +30,12 @@ int			key_pause_set_short(t_all *all, t_list *list,
 	 char **argv, int i)
 {
 	i = i + 1;
+	if (argv[i] == NULL)
+	{
+		if (all->help == 0)
+			help(all, list, argv, i);
+		exit(84);
+	}
 	all->key_pause = argv[i];
 	return (i);
 }

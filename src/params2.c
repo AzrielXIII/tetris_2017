@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  8 10:13:13 2017 Mohan Grewis
-** Last update Sat Mar 11 13:40:19 2017 Mohan Grewis
+** Last update Sat Mar 11 15:39:31 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -39,6 +39,12 @@ int			debug_set(t_all *all, t_list *list, char **argv, int i)
 int			key_left_set_short(t_all *all, t_list *list, char **argv, int i)
 {
 	i = i + 1;
+	if (argv[i] == NULL)
+	{
+		if (all->help == 0)
+			help(all, list, argv, i);
+		exit(84);
+	}
 	all->my_key_left = argv[i];
 	return (i);
 }

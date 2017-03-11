@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  8 11:50:12 2017 Mohan Grewis
-** Last update Sat Mar 11 13:43:36 2017 Mohan Grewis
+** Last update Sat Mar 11 15:38:36 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -13,6 +13,12 @@
 int			key_turn_set_short(t_all *all, t_list *list, char **argv, int i)
 {
 	i = i + 1;
+	if (argv[i] == NULL)
+	{
+		if (all->help == 0)
+			help(all, list, argv, i);
+		exit(84);
+	}
 	all->key_turn = argv[i];
 	return (i);
 }
@@ -29,6 +35,12 @@ int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i)
 int			key_quit_set_short(t_all *all, t_list *list, char **argv, int i)
 {
 	i = i + 1;
+	if (argv[i] == NULL)
+	{
+		if (all->help == 0)
+			help(all, list, argv, i);
+		exit(84);
+	}
 	all->key_quit = argv[i];
 	return (i);
 }
