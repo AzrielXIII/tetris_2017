@@ -10,23 +10,53 @@
 
 #include "../include/my.h"
 
-void		score(t_data *data)
+void		print_sec(int	sec, t_data *data)
+{
+	if (sec < 60)
+	{
+		if (sec < 10)
+		{
+			mvprintw(9, 15, "0");
+			mvprintw(9, 16, "%i", sec);
+		}
+		else
+		mvprintw(9, 15, "%i", sec);
+	}
+	else
+	{
+		data->time = time(NULL);
+		data->min += 1;
+	}
+}
+
+void		timer(t_data *data)
+{
+	int		sec;
+
+	sec = time(NULL) - data->time;
+	mvprintw(9, 5, "Time: ");
+	if (data->min < 10)
+	{
+		mvprintw(9, 12, "0");
+		mvprintw(9, 13, "%i", data->min);
+	}
+	else
+	mvprintw(9, 12, "%i", data->min);
+	mvprintw(9, 14, ": ");
+	print_sec(sec, data);
+}
+
+void		score(t_data *data, t_all *all)
 {
 	WINDOW *boite;
 	color_init();
 	attron(COLOR_PAIR(9));
-	boite = subwin(stdscr, 5, 16, 4, 4);
+	boite = subwin(stdscr, 7, 16, 4, 4);
 	box(boite, ACS_VLINE, ACS_HLINE);
 	attroff(COLOR_PAIR(9));
 	mvprintw(5, 5, "Score: ");
 	mvprintw(5, 12, "%i", data->score);
-	mvprintw(7, 5, "Level: 1");
-	if (getch() == KEY_UP && data->score < 999999)
-		data->score += 1111;
-	if (data->score > 999999)
-		data->score = 999999;
-	if (getch() == KEY_DOWN && data->score > 0)
-		data->score -= 1111;
-	if (data->score < 0)
-		data->score = 0;
+	mvprintw(7, 5, "Level: ");
+	mvprintw(7, 12, "%i", all->level);
+	timer(data);
 }

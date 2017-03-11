@@ -29,7 +29,7 @@ void		exemple()
 	}
 }
 
-void		display()
+void		display(t_all *all)
 {
 	int		i;
 	t_data	*data;
@@ -39,15 +39,15 @@ void		display()
 	i = 0;
 	data = malloc(sizeof(t_data));
 	data->score = 0;
+	data->time = time(NULL);
+	data->min = 0;
 	while (i != 1)
 	{
 		keypad(stdscr, TRUE);
 		i = 0;
 		clear();
-		score(data);
+		score(data, all);
 		refresh();
-		if (getch() == '\n')
-		i = 1;
 	}
 	endwin();
 }
