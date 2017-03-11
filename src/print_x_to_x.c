@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Wed Mar  8 15:12:29 2017 Thomas Dominé
-** Last update Wed Mar  8 15:24:07 2017 Thomas Dominé
+** Last update Wed Mar  8 17:20:52 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -16,7 +16,7 @@ void		print_x_to_x(int x1, int x2, int y)
 	while (x1 < x2)
 	{
 		attron(COLOR_PAIR(7));
-		mvprintw(x1, y, "#");
+		mvprintw(y, x1, "#");
 		x1 += 1;
 	}
 }

@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Thu Mar  9 11:25:03 2017 Mohan Grewis
+** Last update Sat Mar 11 13:28:28 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -58,7 +58,7 @@ typedef struct	s_all
 typedef	struct	s_data
 {
 	char	**s_tab;
-	int	score;
+	int		score;
 	char	**next;
 }				t_data;
 
@@ -93,22 +93,37 @@ int			set_next(t_all *all, t_list *list, char **argv, int i);
 int			debug_set(t_all *all, t_list *list, char **argv, int i);
 int			level_set_long(t_all *all, t_list *list, char **argv, int i);
 int			level_set_short(t_all *all, t_list *list, char **argv, int i);
+<<<<<<< HEAD
 int			cols_and_rows_set(t_all *all, t_list *list, char **argv, int i);
 int			key_left_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_quit_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_left_set_short(t_all *all, t_list *list, char **argv, int i);
+=======
+int			key_quit_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_left_set_long(t_all *all, t_list *list, char **argv, int i);
+int			cols_and_rows_set(t_all *all, t_list *list, char **argv, int i);
+>>>>>>> df6626e1e7c3ff567378627a53049f80755d7a88
 int			key_right_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_left_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_drop_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_turn_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_quit_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_pause_set_long(t_all *all, t_list *list, char **argv, int i);
+<<<<<<< HEAD
 int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
+=======
+int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
+int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i);
+>>>>>>> df6626e1e7c3ff567378627a53049f80755d7a88
 
-void display();
-void color_init();
-int my_get_nbr_v3(char *str);
-void print_x_to_x(int x1, int x2, int y);
-void print_y_to_y(int y1, int y2, int x);
+void		display();
+void		color_init();
+void		score(t_data *data);
+int			my_get_nbr_v3(char *str);
+void		print_x_to_x(int x1, int x2, int y);
+void		print_y_to_y(int y1, int y2, int x);
