@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Sat Mar 11 13:28:28 2017 Mohan Grewis
+** Last update Sat Mar 11 13:36:23 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -42,12 +42,12 @@ typedef	struct	s_list
 typedef struct	s_all
 {
 	int			level;
-	int			my_key_left;
-	int			my_key_right;
-	int			key_turn;
-	int			key_drop;
-	int			key_quit;
-	int			key_pause;
+	char		*my_key_left;
+	char		*my_key_right;
+	char		*key_turn;
+	char		*key_drop;
+	char		*key_quit;
+	char		*key_pause;
 	int			enable_next;
 	int			size_width;
 	int			size_height;
@@ -93,33 +93,19 @@ int			set_next(t_all *all, t_list *list, char **argv, int i);
 int			debug_set(t_all *all, t_list *list, char **argv, int i);
 int			level_set_long(t_all *all, t_list *list, char **argv, int i);
 int			level_set_short(t_all *all, t_list *list, char **argv, int i);
-<<<<<<< HEAD
 int			cols_and_rows_set(t_all *all, t_list *list, char **argv, int i);
 int			key_left_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_quit_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_left_set_short(t_all *all, t_list *list, char **argv, int i);
-=======
-int			key_quit_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_left_set_long(t_all *all, t_list *list, char **argv, int i);
-int			cols_and_rows_set(t_all *all, t_list *list, char **argv, int i);
->>>>>>> df6626e1e7c3ff567378627a53049f80755d7a88
 int			key_right_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_pause_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_left_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_drop_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_turn_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_quit_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_pause_set_long(t_all *all, t_list *list, char **argv, int i);
-<<<<<<< HEAD
 int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
-=======
-int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i);
->>>>>>> df6626e1e7c3ff567378627a53049f80755d7a88
 
 void		display();
 void		color_init();
