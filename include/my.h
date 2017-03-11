@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Thu Mar  9 10:22:48 2017 Mohan Grewis
+** Last update Thu Mar  9 11:25:03 2017 Mohan Grewis
 */
 
 #include <fcntl.h>
@@ -80,7 +80,7 @@ char		*name_collector(char *path);
 char		*get_next_line(const int fd);
 int			count_tetrimino(t_list *list);
 t_tetrimino	*parsing_tetrimino(char *path);
-void	print_tetrimino(t_tetrimino *brick);
+void		print_tetrimino(t_tetrimino *brick);
 t_list		*tetrimino_collector(char *path);
 char		*str_extractor_malloc(char *str);
 int			my_strcmp(char *str1, char *str2);
@@ -88,24 +88,24 @@ void		print_tetrimino_alpha(t_list *list);
 void		print_tetrimino_alpha_2(t_list *list, char a);
 int			debug(t_all *all, t_list *list, char **argv, int i);
 
-int			key_left_set_long(t_all *all, t_list *list, char **argv, int i);
-int			debug_set(t_all *all, t_list *list, char **argv, int i);
 int			help(t_all *all, t_list *list, char **argv, int i);
-int			level_set_short(t_all *all, t_list *list, char **argv, int i);
+int			set_next(t_all *all, t_list *list, char **argv, int i);
+int			debug_set(t_all *all, t_list *list, char **argv, int i);
 int			level_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_left_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_right_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_drop_set_short(t_all *all, t_list *list, char **argv, int i);
+int			level_set_short(t_all *all, t_list *list, char **argv, int i);
+int			cols_and_rows_set(t_all *all, t_list *list, char **argv, int i);
+int			key_left_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_quit_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_left_set_short(t_all *all, t_list *list, char **argv, int i);
+int			key_right_set_long(t_all *all, t_list *list, char **argv, int i);
+int			key_drop_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_turn_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_quit_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_quit_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_pause_set_long(t_all *all, t_list *list, char **argv, int i);
-int			cols_and_rows_set(t_all *all, t_list *list, char **argv, int i);
-int			set_next(t_all *all, t_list *list, char **argv, int i);
+int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i);
+int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
 
 void display();
 void color_init();
