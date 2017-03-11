@@ -64,5 +64,6 @@ int				main(int ac, char **av, char **ae)
 	flags_handler(av, ac, all, tetrimino);
 	if (all->debug == 1)
 		debug(all, tetrimino, av, 0);
-	//display();
+	else
+	display(all);
 }

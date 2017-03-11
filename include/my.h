@@ -8,6 +8,8 @@
 ** Last update Sat Mar 11 13:36:23 2017 Mohan Grewis
 */
 
+#include <time.h>
+#include <term.h>
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +19,6 @@
 #include <ncurses.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <term.h>
 
 typedef	struct	s_tetrimino
 {
@@ -60,6 +61,8 @@ typedef	struct	s_data
 	char	**s_tab;
 	int		score;
 	char	**next;
+	int		time;
+	int		min;
 }				t_data;
 
 typedef struct	s_flags
@@ -107,9 +110,9 @@ int			key_quit_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i);
 int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
 
-void		display();
 void		color_init();
-void		score(t_data *data);
+void		display(t_all *all);
 int			my_get_nbr_v3(char *str);
+void		score(t_data *data, t_all *all);
 void		print_x_to_x(int x1, int x2, int y);
 void		print_y_to_y(int y1, int y2, int x);
