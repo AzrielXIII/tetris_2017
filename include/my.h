@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Sat Mar 11 13:36:23 2017 Mohan Grewis
+** Last update Sat Mar 11 16:57:26 2017 John Doe
 */
 
 #include <time.h>
@@ -22,14 +22,14 @@
 
 typedef	struct	s_tetrimino
 {
-	int					current_shape;
-	char				**shape;
-	char				**shape90;
-	char				**shape180;
-	char				**shape270;
-	int					width;
-	int					height;
-	int					color;
+	int			current_shape;
+	char		**shape;
+	char		**shape90;
+	char		**shape180;
+	char		**shape270;
+	int			width;
+	int			height;
+	int			color;
 }				t_tetrimino;
 
 typedef	struct	s_list
@@ -58,7 +58,7 @@ typedef struct	s_all
 
 typedef	struct	s_data
 {
-	char	**s_tab;
+	char	**game;
 	int		score;
 	char	**next;
 	int		time;
@@ -83,11 +83,11 @@ char		*name_collector(char *path);
 char		*get_next_line(const int fd);
 int			count_tetrimino(t_list *list);
 t_tetrimino	*parsing_tetrimino(char *path);
-void		print_tetrimino(t_tetrimino *brick);
 t_list		*tetrimino_collector(char *path);
 char		*str_extractor_malloc(char *str);
 int			my_strcmp(char *str1, char *str2);
 void		print_tetrimino_alpha(t_list *list);
+void		print_tetrimino(t_tetrimino *brick);
 void		print_tetrimino_alpha_2(t_list *list, char a);
 int			debug(t_all *all, t_list *list, char **argv, int i);
 
@@ -114,5 +114,6 @@ void		color_init();
 void		display(t_all *all);
 int			my_get_nbr_v3(char *str);
 void		score(t_data *data, t_all *all);
+void		tab_game(t_data *data, t_all *all);
 void		print_x_to_x(int x1, int x2, int y);
 void		print_y_to_y(int y1, int y2, int x);

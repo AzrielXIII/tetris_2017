@@ -10,25 +10,6 @@
 
 #include "../include/my.h"
 
-void		exemple()
-{
-	int		i;
-	int		a;
-
-	i = 0;
-	a = 1;
-	while (i < 30)
-	{
-		attron(COLOR_PAIR(a));
-		printw("J'aime les pates");
-		i += 1;
-		if (a > 7)
-		a = 1;
-		else
-		a += 1;
-	}
-}
-
 void		display(t_all *all)
 {
 	int		i;
@@ -43,7 +24,6 @@ void		display(t_all *all)
 	data->min = 0;
 	while (i != 1)
 	{
-		keypad(stdscr, TRUE);
 		i = 0;
 		clear();
 		score(data, all);
