@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 13:44:48 2017 Mohan Grewis
-** Last update Mon Mar 13 16:21:00 2017 Mohan Grewis
+** Last update Mon Mar 13 16:22:33 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -51,7 +51,6 @@ int		my_strcmp(char *str1, char *str2)
 void 		setup_term(char **ae)
 {
 	int		i;
-	char	*str;
 
 	i = 0;
 	while (ae[i] != NULL)
