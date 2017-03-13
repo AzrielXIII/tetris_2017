@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Mon Mar 13 11:22:58 2017 Thomas Dominé
+** Last update Mon Mar 13 16:47:25 2017 Thomas Dominé
 */
 
 #include <time.h>
@@ -83,13 +83,17 @@ char		*name_collector(char *path);
 char		*get_next_line(const int fd);
 int			count_tetrimino(t_list *list);
 t_tetrimino	*parsing_tetrimino(char *path);
+int			last_char_in_string(char *str);
 t_list		*tetrimino_collector(char *path);
 char		*str_extractor_malloc(char *str);
 int			my_strcmp(char *str1, char *str2);
 void		print_tetrimino_alpha(t_list *list);
 void		print_tetrimino(t_tetrimino *brick);
+char		*create_space(char *str, int width);
+void		create_the_roation(t_tetrimino *brick);
 void		print_tetrimino_alpha_2(t_list *list, char a);
 int			debug(t_all *all, t_list *list, char **argv, int i);
+char		**rotate_my_tetrimino(char **tetrimino, int width, int height);
 
 int			help(t_all *all, t_list *list, char **argv, int i);
 int			set_next(t_all *all, t_list *list, char **argv, int i);

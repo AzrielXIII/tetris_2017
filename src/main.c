@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:40:49 2017 Mohan Grewis
-** Last update Mon Mar 13 11:21:05 2017 Thomas Dominé
+** Last update Mon Mar 13 16:49:43 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -65,5 +65,5 @@ int				main(int ac, char **av, char **ae)
 	if (all->debug == 1)
 		debug(all, tetrimino, av, 0);
 	else
-	display(all);
+		display(all);
 }
