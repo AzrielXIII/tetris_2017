@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Mon Mar 13 16:47:25 2017 Thomas Dominé
+** Last update Mon Mar 13 17:49:35 2017 Thomas Dominé
 */
 
 #include <time.h>
@@ -90,6 +90,7 @@ int			my_strcmp(char *str1, char *str2);
 void		print_tetrimino_alpha(t_list *list);
 void		print_tetrimino(t_tetrimino *brick);
 char		*create_space(char *str, int width);
+t_tetrimino	*random_tetrimino(t_list *tetrimino);
 void		create_the_roation(t_tetrimino *brick);
 void		print_tetrimino_alpha_2(t_list *list, char a);
 int			debug(t_all *all, t_list *list, char **argv, int i);
