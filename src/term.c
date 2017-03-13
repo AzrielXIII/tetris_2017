@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 13:44:48 2017 Mohan Grewis
-** Last update Sat Mar 11 13:56:46 2017 Mohan Grewis
+** Last update Mon Mar 13 16:21:00 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -60,7 +60,4 @@ void 		setup_term(char **ae)
 			setupterm(ae[i] + 5, 1, NULL);
 		i += 1;
 	}
-	str = tigetstr("smkx");
-	if (str != NULL)
-		my_printf("%s", str);
 }
