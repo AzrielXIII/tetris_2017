@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Sat Mar 11 16:57:26 2017 John Doe
+** Last update Mon Mar 13 10:44:40 2017 Mohan Grewis
 */
 
 #include <time.h>
@@ -88,6 +88,7 @@ char		*str_extractor_malloc(char *str);
 int			my_strcmp(char *str1, char *str2);
 void		print_tetrimino_alpha(t_list *list);
 void		print_tetrimino(t_tetrimino *brick);
+char		*create_space(char *str, int width);
 void		print_tetrimino_alpha_2(t_list *list, char a);
 int			debug(t_all *all, t_list *list, char **argv, int i);
 

@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:44:19 2017 Mohan Grewis
-** Last update Sat Mar 11 15:29:55 2017 Mohan Grewis
+** Last update Mon Mar 13 10:44:03 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -94,7 +94,7 @@ t_tetrimino		*parsing_tetrimino(char *path)
 		return (NULL);
 		if (my_strlen(str) - space_counter(str) > brick->width)
 			return (NULL);
-		brick->shape[i] = str;
+		brick->shape[i] = create_space(str, brick->width);
 		i = i + 1;
 	}
 	if (brick->height > i)

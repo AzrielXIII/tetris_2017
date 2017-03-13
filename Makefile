@@ -5,7 +5,7 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Sat Mar 11 16:57:57 2017 John Doe
+## Last update Mon Mar 13 10:49:10 2017 Mohan Grewis
 ##
 CC			=	gcc
 
@@ -19,6 +19,7 @@ SRC			=	src/main.c			\
 				src/params3.c		\
 				src/parsing.c		\
 				src/display.c		\
+				src/parsing3.c		\
 				src/params4.c		\
 				src/params5.c		\
 				src/parsing2.c		\

@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  1 14:47:53 2017 Mohan Grewis
-** Last update Sat Mar 11 14:01:50 2017 Mohan Grewis
+** Last update Mon Mar 13 11:15:13 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -26,7 +26,8 @@ void	print_tetrimino(t_tetrimino *brick)
 	my_printf("Color %d :\n", brick->color);
 	while (brick->shape[i] != NULL)
 	{
-		my_printf("%s\n", brick->shape[i]);
+		write(1, brick->shape[i], last_char_in_string(brick->shape[i]) + 1);
+		write(1, "\n", 1);
 		i += 1;
 	}
 }

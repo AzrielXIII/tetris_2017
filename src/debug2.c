@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 12:42:46 2017 Mohan Grewis
-** Last update Sat Mar 11 13:51:34 2017 Mohan Grewis
+** Last update Mon Mar 13 11:09:57 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -53,4 +53,20 @@ void	print_tetrimino_alpha_2(t_list *list, char a)
 		else
 			my_printf("Error\n");
 	}
+}
+
+int		last_char_in_string(char *str)
+{
+	int	i;
+	int	a;
+
+	i = 0;
+	a = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] != ' ')
+			a = i;
+		i += 1;
+	}
+	return (a);
 }
