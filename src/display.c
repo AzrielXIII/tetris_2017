@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Thu Mar  9 16:43:25 2017 Thomas Dominé
+** Last update Mon Mar 13 11:01:08 2017 John Doe
 */
 
 #include "../include/my.h"
@@ -27,7 +27,9 @@ void		display(t_all *all)
 		i = 0;
 		clear();
 		score(data, all);
+		tab_game(data, all);
 		refresh();
+		usleep(1);
 	}
 	endwin();
 }
