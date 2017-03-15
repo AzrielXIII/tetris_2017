@@ -5,33 +5,33 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar 15 11:04:39 2017 Mohan Grewis
-** Last update Wed Mar 15 11:16:30 2017 Mohan Grewis
+** Last update Wed Mar 15 11:21:46 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
 
-char	**tab_integration(char **game_tab, char **tetrimino, int j, int i)
+char	**tab_integration(char **game_tab, char **tetrimino, int y, int x)
 {
 	int	a;
 	int	b;
-	int	i_cpy;
+	int	x_cpy;
 
 	a = 0;
 	b = 0;
 	while (tetrimino[a] != NULL)
 	{
-		i_cpy = i;
-		if (game_tab[j] == NULL)
+		x_cpy = x;
+		if (game_tab[y] == NULL)
 			return (NULL);
 		while (tetrimino[a][b] != '\0')
 		{
-			if (game_tab[j][i_cpy] == '\0')
+			if (game_tab[y][x_cpy] == '\0')
 				return (NULL);
-			game_tab[j][i_cpy] = tetrimino[a][b];
+			game_tab[y][x_cpy] = tetrimino[a][b];
 			b += 1;
-			i_cpy += 1;
+			x_cpy += 1;
 		}
-		j += 1;
+		y += 1;
 		b += 1;
 	}
 	return (game_tab);
