@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Mon Mar 13 17:49:35 2017 Thomas Dominé
+** Last update Wed Mar 15 10:56:55 2017 Thomas Dominé
 */
 
 #include <time.h>
@@ -68,7 +68,8 @@ typedef	struct	s_data
 typedef struct	s_flags
 {
 	char			*flags;
-	int				(*ptrfonct)(t_all *all, t_list *list, char **argv, int i);
+	int				(*ptrfonct)(t_all *all, t_list *list,
+		 				char **argv, int i);
 }				t_flags;
 
 t_all		*set_default();
@@ -105,20 +106,30 @@ int			cols_and_rows_set(t_all *all, t_list *list, char **argv, int i);
 int			key_left_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_drop_set_long(t_all *all, t_list *list, char **argv, int i);
 int			key_turn_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_quit_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_right_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_pause_set_long(t_all *all, t_list *list, char **argv, int i);
-int			key_left_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_drop_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_turn_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_quit_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_pause_set_short(t_all *all, t_list *list, char **argv, int i);
-int			key_right_set_short(t_all *all, t_list *list, char **argv, int i);
+int			key_quit_set_long(t_all *all, t_list *list,
+								char **argv, int i);
+int			key_right_set_long(t_all *all, t_list *list,
+								char **argv, int i);
+int			key_pause_set_long(t_all *all, t_list *list,
+								char **argv, int i);
+int			key_left_set_short(t_all *all, t_list *list,
+								char **argv, int i);
+int			key_drop_set_short(t_all *all, t_list *list,
+								char **argv, int i);
+int			key_turn_set_short(t_all *all, t_list *list,
+								char **argv, int i);
+int			key_quit_set_short(t_all *all, t_list *list,
+								char **argv, int i);
+int			key_pause_set_short(t_all *all, t_list *list,
+								char **argv, int i);
+int			key_right_set_short(t_all *all, t_list *list,
+								char **argv, int i);
 
 void		color_init();
-void		display(t_all *all);
 int			my_get_nbr_v3(char *str);
 void		score(t_data *data, t_all *all);
-void		tab_game(t_data *data, t_all *all);
 void		print_x_to_x(int x1, int x2, int y);
 void		print_y_to_y(int y1, int y2, int x);
+void		display(t_all *all, t_list *tetrimino);
+void		tab_game(t_data *data, t_all *all, t_list *tetrimino,
+	 					t_tetrimino *tet);

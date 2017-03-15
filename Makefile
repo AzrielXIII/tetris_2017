@@ -5,7 +5,7 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Mon Mar 13 16:48:06 2017 Thomas Dominé
+## Last update Tue Mar 14 16:54:10 2017 Thomas Dominé
 ##
 CC			=	gcc
 
@@ -25,6 +25,7 @@ SRC			=	src/main.c			\
 				src/parsing3.c		\
 				src/tab_game.c		\
 				src/tetrimino.c		\
+				src/tetrimino2.c	\
 				src/color_init.c	\
 				src/my_get_nbr.c	\
 				src/print_x_to_x.c	\
@@ -43,7 +44,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(LIBPRINTF)
 	$(LIBGNL)
-	gcc -o $(NAME) $(OBJ) -L./lib -lprintf -lgnl -lncurses
+	gcc -o $(NAME) $(OBJ) -L./lib -lprintf -lgnl -lncurses -g
 
 clean:
 	rm -f $(OBJ)
