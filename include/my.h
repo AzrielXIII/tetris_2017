@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Mon Mar 13 17:49:35 2017 Thomas Dominé
+** Last update Wed Mar 15 11:17:31 2017 Mohan Grewis
 */
 
 #include <time.h>
@@ -95,6 +95,7 @@ void		create_the_roation(t_tetrimino *brick);
 void		print_tetrimino_alpha_2(t_list *list, char a);
 int			debug(t_all *all, t_list *list, char **argv, int i);
 char		**rotate_my_tetrimino(char **tetrimino, int width, int height);
+char		**tab_integration(char **game_tab, char **tetrimino, int j, int i);
 
 int			help(t_all *all, t_list *list, char **argv, int i);
 int			set_next(t_all *all, t_list *list, char **argv, int i);
