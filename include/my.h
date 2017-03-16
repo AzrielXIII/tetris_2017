@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Wed Mar 15 11:18:57 2017 Mohan Grewis
+** Last update Thu Mar 16 18:05:00 2017 Thomas Dominé
 */
 
 #include <time.h>
@@ -97,7 +97,7 @@ void		print_tetrimino_alpha_2(t_list *list, char a);
 int			debug(t_all *all, t_list *list, char **argv, int i);
 char		**rotate_my_tetrimino(char **tetrimino, int width, int height);
 char		**tab_integration(char **game_tab, char **tetrimino,
-	 							int j, int i);
+	 							int y, int x);
 
 int			help(t_all *all, t_list *list, char **argv, int i);
 int			set_next(t_all *all, t_list *list, char **argv, int i);
@@ -128,7 +128,9 @@ int			key_right_set_short(t_all *all, t_list *list,
 								char **argv, int i);
 
 void		color_init();
+char		analys(char c);
 int			my_get_nbr_v3(char *str);
+void		print_game(t_data *data);
 void		score(t_data *data, t_all *all);
 void		print_x_to_x(int x1, int x2, int y);
 void		print_y_to_y(int y1, int y2, int x);

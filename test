@@ -1,0 +1,73 @@
+==27626== Memcheck, a memory error detector
+==27626== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==27626== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==27626== Command: ./tetris -l 13
+==27626== 
+==27626== Invalid write of size 1
+==27626==    at 0x40223E: name_collector (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402AA8: put_in_list (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402C58: tetrimino_collector (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x400F97: main (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==  Address 0x585f252 is 0 bytes after a block of size 2 alloc'd
+==27626==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==27626==    by 0x402213: name_collector (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402AA8: put_in_list (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402C58: tetrimino_collector (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x400F97: main (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626== 
+==27626== Invalid write of size 1
+==27626==    at 0x402265: name_collector (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402AA8: put_in_list (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402C58: tetrimino_collector (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x400F97: main (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==  Address 0x585f25a is 8 bytes after a block of size 2 alloc'd
+==27626==    at 0x4C2DB8F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==27626==    by 0x402213: name_collector (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402AA8: put_in_list (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402C58: tetrimino_collector (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x400F97: main (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626== 
+==27626== Conditional jump or move depends on uninitialised value(s)
+==27626==    at 0x4035B4: tab_integration (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402FCB: tab_game (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x40245A: all_while (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402508: display (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x400FFA: main (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626== 
+==27626== Invalid read of size 8
+==27626==    at 0x402F6D: test_print (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402FE8: tab_game (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x40245A: all_while (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402508: display (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x400FFA: main (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==27626== 
+==27626== 
+==27626== Process terminating with default action of signal 11 (SIGSEGV)
+==27626==  Access not within mapped region at address 0x0
+==27626==    at 0x402F6D: test_print (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402FE8: tab_game (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x40245A: all_while (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x402508: display (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==    by 0x400FFA: main (in /home/azriel/Epitech/PSU_2016_tetris/tetris)
+==27626==  If you believe this happened as a result of a stack
+==27626==  overflow in your program's main thread (unlikely but
+==27626==  possible), you can try to increase the size of the
+==27626==  main thread stack using the --main-stacksize= flag.
+==27626==  The main thread stack size used in this run was 8388608.
+==27626== 
+==27626== HEAP SUMMARY:
+==27626==     in use at exit: 371,470 bytes in 548 blocks
+==27626==   total heap usage: 565 allocs, 17 frees, 422,379 bytes allocated
+==27626== 
+==27626== LEAK SUMMARY:
+==27626==    definitely lost: 1,633 bytes in 82 blocks
+==27626==    indirectly lost: 8,386 bytes in 142 blocks
+==27626==      possibly lost: 1,496 bytes in 1 blocks
+==27626==    still reachable: 359,955 bytes in 323 blocks
+==27626==         suppressed: 0 bytes in 0 blocks
+==27626== Rerun with --leak-check=full to see details of leaked memory
+==27626== 
+==27626== For counts of detected and suppressed errors, rerun with: -v
+==27626== Use --track-origins=yes to see where uninitialised values come from
+==27626== ERROR SUMMARY: 18 errors from 4 contexts (suppressed: 0 from 0)

@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Thu Mar 16 15:59:51 2017 Thomas Dominé
+** Last update Thu Mar 16 16:46:00 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -21,15 +21,11 @@ void		all_while(t_data *data, t_all *all, t_tetrimino *tet,
 	while (i != 1)
 	{
 		clear();
-		if (bol == 0)
-		{
-			tet = random_tetrimino(tetrimino);
-			bol = 1;
-		}
-		//score(data, all);
+		tet = random_tetrimino(tetrimino);
+		score(data, all);
 		tab_game(data, all, tetrimino, tet);
 		refresh();
-		sleep(10000000);
+		sleep(1);
 	}
 }
 

@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Wed Mar  8 15:04:26 2017 Thomas Dominé
-** Last update Thu Mar  9 10:41:41 2017 Thomas Dominé
+** Last update Thu Mar 16 17:28:55 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -30,5 +30,4 @@ void		color_init()
 	init_pair(13, COLOR_MAGENTA, COLOR_BLACK);
 	init_pair(14, COLOR_CYAN, COLOR_BLACK);
 	init_pair(15, COLOR_WHITE, COLOR_BLACK);
-	init_pair(16, COLOR_WHITE, COLOR_BLACK);
 }

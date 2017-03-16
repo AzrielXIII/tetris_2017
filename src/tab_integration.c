@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar 15 11:04:39 2017 Mohan Grewis
-** Last update Wed Mar 15 11:21:46 2017 Mohan Grewis
+** Last update Thu Mar 16 15:58:30 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -17,9 +17,10 @@ char	**tab_integration(char **game_tab, char **tetrimino, int y, int x)
 	int	x_cpy;
 
 	a = 0;
-	b = 0;
 	while (tetrimino[a] != NULL)
 	{
+		b = 0;
+		puts("1");
 		x_cpy = x;
 		if (game_tab[y] == NULL)
 			return (NULL);
@@ -32,7 +33,7 @@ char	**tab_integration(char **game_tab, char **tetrimino, int y, int x)
 			x_cpy += 1;
 		}
 		y += 1;
-		b += 1;
+		a += 1;
 	}
 	return (game_tab);
 }
