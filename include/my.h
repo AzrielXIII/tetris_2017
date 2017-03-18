@@ -145,6 +145,7 @@ int			key_right_set_short(t_all *all, t_list *list,
 void		color_init();
 char		analys(char c);
 int			select_color(char c);
+void		delet_line(t_data *data);
 int			my_get_nbr_v3(char *str);
 int			identification_char(char c);
 char		select_letter(int nb_color);
