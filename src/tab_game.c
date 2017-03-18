@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Mon Mar 13 11:21:35 2017 Thomas Dominé
-** Last update Sat Mar 18 09:47:16 2017 Thomas Dominé
+** Last update Sat Mar 18 10:59:07 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -32,10 +32,12 @@ void 		frame(t_all *all)
 {
 	WINDOW *boite;
 
+	attron(COLOR_PAIR(15));
 	boite = subwin(stdscr, all->size_height + 2,
-	all->size_width * 2 + 2, LINES / 2 - ( all->size_height / 2 + 1),
+	all->size_width * 2 + 2, LINES / 2 - (all->size_height / 2 + 1),
 	COLS / 2 - (all->size_width + 1));
 	box(boite, ACS_VLINE, ACS_HLINE);
+	attroff(COLOR_PAIR(15));
 }
 
 void		init_tab(t_data *data, t_all *all)
@@ -63,8 +65,9 @@ void	tab_game(t_data *data, t_all *all)
 	memories(data, all);
 	init_tab(data, all);
 	data->current = data->next_tet;
-	data->game = tab_integration(data->game, data->current->shape, 1, 1);
+	data->game = tab_integration(data->game, data->current->shape, 0,
+		all->size_width - data->current->width);
 	tetrimino_coloration(data, data->current);
 	print_game(data, all);
-	next_tetrimino(data);
+	next_tetrimino(data, all);
 }
