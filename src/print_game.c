@@ -5,32 +5,12 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Thu Mar 16 16:58:45 2017 Thomas Dominé
-** Last update Thu Mar 16 17:55:45 2017 Thomas Dominé
+** Last update Sat Mar 18 09:44:44 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
 
-int			select_color(char c)
-{
-	int		i;
-
-	i = 0;
-	if (c == 'R' || c == 'r')
-	i = 1;
-	if (c == 'G' || c == 'g')
-	i = 2;
-	if (c == 'Y' || c == 'y')
-	i = 3;
-	if (c == 'B' || c == 'b')
-	i = 4;
-	if (c == 'M' || c == 'm')
-	i = 5;
-	if (c == 'C' || c == 'c')
-	i = 6;
-	return (i);
-}
-
-void		print_game(t_data *data)
+void		print_game(t_data *data, t_all *all)
 {
 	int		i;
 	int		p;
@@ -46,7 +26,8 @@ void		print_game(t_data *data)
 			color = (select_color(data->game[i][p]));
 			if (color != 0)
 			attron(COLOR_PAIR(color));
-			mvprintw(5 + i, 30 + p, "%c", data->game[i][p]);
+			mvprintw(LINES / 2 - (all->size_height / 2) + i,
+				COLS / 2 - all->size_width + p, "%c", data->game[i][p]);
 			attroff(COLOR_PAIR(color));
 			p += 1;
 		}

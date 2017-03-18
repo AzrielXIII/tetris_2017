@@ -5,25 +5,29 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Thu Mar 16 16:46:00 2017 Thomas Dominé
+** Last update Sat Mar 18 09:48:09 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
 
-void		all_while(t_data *data, t_all *all, t_tetrimino *tet,
-						t_list *tetrimino)
+void		all_while(t_data *data, t_all *all, t_list *tetrimino)
 {
 	int		i;
 	int		bol;
 
 	i = 0;
 	bol = 0;
+	data->list = tetrimino;
 	while (i != 1)
 	{
 		clear();
-		tet = random_tetrimino(tetrimino);
+		if (bol == 0)
+		{
+			data->next_tet = random_tetrimino(data->list);
+			bol = 1;
+		}
 		score(data, all);
-		tab_game(data, all, tetrimino, tet);
+		tab_game(data, all);
 		refresh();
 		sleep(1);
 	}
@@ -33,7 +37,6 @@ void			display(t_all *all, t_list *tetrimino)
 {
 	int			i;
 	t_data		*data;
-	t_tetrimino	*tet;
 	int			bol;
 
 	initscr();
@@ -44,7 +47,6 @@ void			display(t_all *all, t_list *tetrimino)
 	data->score = 0;
 	data->time = time(NULL);
 	data->min = 0;
-	tet = random_tetrimino(tetrimino);
-	all_while(data, all, tet, tetrimino);
+	all_while(data, all, tetrimino);
 	endwin();
 }
