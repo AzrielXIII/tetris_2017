@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Mar 18 13:57:14 2017 Thomas Dominé
-** Last update Sat Mar 18 15:41:03 2017 Thomas Dominé
+** Last update Sat Mar 18 21:35:47 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -44,24 +44,48 @@ void		move_down(t_data *data, int i)
 	}
 }
 
-void		down_tetrimino(t_data *data, t_all *all)
+/*void		down_tetrimino(t_data *data, t_all *all)
 {
-	int		stop;
 	int		i;
 	int		t;
 
-	stop = 0;
-	while (stop == 0)
+	data->end = 0;
+	t = 0;
+	i = count(data);
+	t = time(NULL) - data->time_down;
+	if (t == data->temp_down + 1)
 	{
-		i = count(data);
-		t = time(NULL);
-		if (getch() == 's')
+		data->temp_down += 1;
+		if (verif_char_down(data) == 1)
 		{
-			if (verif_char_down(data) == 1)
-			stop = 1;
-			else
-			move_down(data, i);
+			data->end = 1;
+			data->score += 10;
 		}
-		print_game(data, all);
+		else
+		move_down(data, i);
+	}
+}*/
+
+void		down_tetrimino(t_data *data, t_all *all)
+{
+	int		i;
+	int		t;
+	float	coef;
+
+	data->end = 0;
+	t = 0;
+	coef = 20000;
+	i = count(data);
+	//t = time(NULL) - data->time_down;
+	if (clock() / coef >= 1 + t / coef && (t = clock()))
+	{
+	//tem += 1;
+	if (verif_char_down(data) == 1)
+	{
+		data->end = 1;
+		data->score += 10;
+	}
+	else
+	move_down(data, i);
 	}
 }

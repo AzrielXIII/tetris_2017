@@ -5,11 +5,7 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-<<<<<<< HEAD
-## Last update Sat Mar 18 15:24:12 2017 Thomas Dominé
-=======
-## Last update Sat Mar 18 15:05:11 2017 Mohan Grewis
->>>>>>> master
+## Last update Sat Mar 18 21:30:10 2017 Thomas Dominé
 ##
 CC			=	gcc
 
@@ -35,13 +31,16 @@ SRC			=	src/main.c					\
 				src/tetrimino2.c			\
 				src/color_init.c			\
 				src/my_get_nbr.c			\
+				src/print_next.c			\
+				src/verif_char.c			\
 				src/select_color.c			\
 				src/verif_screen.c			\
 				src/select_letter.c			\
+				src/memories_game.c			\
 				src/next_tetrimino.c		\
 				src/down_tetrimino.c		\
-				src/verif_char_down.c		\
 				src/tab_integration.c		\
+				src/miniaturisation.c		\
 				src/identification_char.c	\
 				src/tetrimino_coloration.c
 
