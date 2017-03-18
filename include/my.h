@@ -5,7 +5,11 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
+<<<<<<< HEAD
 ** Last update Sat Mar 18 15:23:50 2017 Thomas Dominé
+=======
+** Last update Sat Mar 18 15:04:55 2017 Mohan Grewis
+>>>>>>> master
 */
 
 #include <time.h>
@@ -16,8 +20,10 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <dirent.h>
+#include <termios.h>
 #include <ncurses.h>
 #include <sys/stat.h>
+#include <sys/ioctl.h>
 #include <sys/types.h>
 
 typedef	struct	s_tetrimino
@@ -75,6 +81,7 @@ typedef struct	s_flags
 		 				char **argv, int i);
 }				t_flags;
 
+void		wait_char();
 t_all		*set_default();
 int			my_strlen(char *str);
 void 		setup_term(char **ae);
@@ -88,6 +95,7 @@ char		*get_next_line(const int fd);
 int			count_tetrimino(t_list *list);
 t_tetrimino	*parsing_tetrimino(char *path);
 int			last_char_in_string(char *str);
+void 		unset_read(struct termios *old);
 t_list		*tetrimino_collector(char *path);
 char		*str_extractor_malloc(char *str);
 int			my_strcmp(char *str1, char *str2);
@@ -97,6 +105,7 @@ char		*create_space(char *str, int width);
 t_tetrimino	*random_tetrimino(t_list *tetrimino);
 void		create_the_roation(t_tetrimino *brick);
 void		print_tetrimino_alpha_2(t_list *list, char a);
+void 		set_read(struct termios *old, struct termios *new);
 int			debug(t_all *all, t_list *list, char **argv, int i);
 char		**rotate_my_tetrimino(char **tetrimino, int width, int height);
 char		**tab_integration(char **game_tab, char **tetrimino,

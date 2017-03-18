@@ -5,12 +5,17 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
+<<<<<<< HEAD
 ## Last update Sat Mar 18 15:24:12 2017 Thomas Dominé
+=======
+## Last update Sat Mar 18 15:05:11 2017 Mohan Grewis
+>>>>>>> master
 ##
 CC			=	gcc
 
 SRC			=	src/main.c					\
 				src/term.c					\
+				src/term2.c					\
 				src/debug.c					\
 				src/score.c					\
 				src/analys.c				\

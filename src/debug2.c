@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 12:42:46 2017 Mohan Grewis
-** Last update Mon Mar 13 11:09:57 2017 Mohan Grewis
+** Last update Sat Mar 18 14:26:24 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -75,4 +75,15 @@ int		last_char_in_string(char *str)
 		i += 1;
 	}
 	return (a);
+}
+
+void		wait_char()
+{
+	char	str[256];
+
+	str[0] = '\0';
+	while (str[0] == '\0')
+	{
+		read(0, str, 256);
+	}
 }
