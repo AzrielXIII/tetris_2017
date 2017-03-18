@@ -28,3 +28,22 @@ char		*create_space(char *str, int width)
 	r[i] = '\0';
 	return (r);
 }
+
+char		*name_collector(char *path)
+{
+	int		i;
+	char	*name;
+
+	i = 0;
+	while (path[i] == '.')
+		i += 1;
+	name = malloc(sizeof(char) * (i + 2));
+	i = 0;
+	while (path[i] != '.')
+	{
+		name[i] = path[i];
+		i += 1;
+	}
+	name[i] = '\0';
+	return (name);
+}

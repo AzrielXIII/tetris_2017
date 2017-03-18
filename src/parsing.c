@@ -55,23 +55,16 @@ t_tetrimino		*first_line_handler(int fd, t_tetrimino *brick)
 	return (brick);
 }
 
-char		*name_collector(char *path)
+int			loop(int i, char *str, int *a, t_tetrimino *brick)
 {
-	int		i;
-	char	*name;
-
-	i = 0;
-	while (path[i] == '.')
-		i += 1;
-	name = malloc(sizeof(char) * (i + 2));
-	i = 0;
-	while (path[i] != '.')
-	{
-		name[i] = path[i];
-		i += 1;
-	}
-	name[i] = '\0';
-	return (name);
+	if (i + 1 > brick->height || my_strlen(str) - space_counter(str)
+	 > brick->width)
+		return (-1);
+	if (my_strlen(str) == brick->width)
+		*a = 1;
+	brick->shape[i] = create_space(str, brick->width);
+	i += 1;
+	return (i);
 }
 
 t_tetrimino		*parsing_tetrimino(char *path)
@@ -80,7 +73,10 @@ t_tetrimino		*parsing_tetrimino(char *path)
 	t_tetrimino	*brick;
 	int			fd;
 	int			i;
+	int			a;
 
+	a = 0;
+	brick = NULL;
 	i = 0;
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
@@ -89,13 +85,10 @@ t_tetrimino		*parsing_tetrimino(char *path)
 		return (NULL);
 	brick->shape = malloc(sizeof(char *) * (brick->height + 1));
 	while ((str = get_next_line(fd)) != NULL)
-	{
-		if (i + 1 > brick->height || my_strlen(str) - space_counter(str)
-		 > brick->width)
+		if ((i = loop(i, str, &a, brick)) == -1)
 			return (NULL);
-		brick->shape[i] = create_space(str, brick->width);
-		i += 1;
-	}
+	if (a == 0)
+		return (NULL);
 	if (brick->height > i)
 		return (NULL);
 	brick->shape[i] = NULL;
