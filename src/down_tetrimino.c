@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Mar 18 13:57:14 2017 Thomas Dominé
-** Last update Sat Mar 18 22:31:42 2017 Thomas Dominé
+** Last update Sat Mar 18 22:39:47 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -53,7 +53,7 @@ void		down_tetrimino(t_data *data, t_all *all)
 	t = 0;
 	i = count(data);
 	t = time(NULL) - data->time_down;
-	if (t == data->temp_down + 1 || getch() == 's')
+	if (t == data->temp_down + 1)
 	{
 		data->temp_down += 1;
 		if (verif_char_down(data) == 1)
