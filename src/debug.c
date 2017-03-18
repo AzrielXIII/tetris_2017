@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Mar  1 14:47:53 2017 Mohan Grewis
-** Last update Mon Mar 13 16:16:08 2017 Mohan Grewis
+** Last update Sat Mar 18 14:54:21 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -57,7 +57,7 @@ void		print_tetrimino_alpha(t_list *list)
 	}
 }
 
-int		debug(t_all *all, t_list *list, char **argv, int i)
+int			debug(t_all *all, t_list *list, char **argv, int i)
 {
 	my_printf("*** DEBUG MODE ***\n");
 	my_printf("Key Left : ");
@@ -80,5 +80,7 @@ int		debug(t_all *all, t_list *list, char **argv, int i)
 	my_printf("Size : %d*%d\n", all->size_width, all->size_height);
 	my_printf("Tetriminos : %d\n", count_tetrimino(list));
 	print_tetrimino_alpha(list);
+	my_printf("Press any key to start Tetris\n");
+	wait_char();
 	return (i);
 }
