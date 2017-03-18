@@ -51,12 +51,27 @@ int		my_strcmp(char *str1, char *str2)
 void 		setup_term(char **ae)
 {
 	int		i;
+	int		a;
 
+	if (ae[0] == NULL)
+	{
+		write(2, "Environnement vide merci de ne pas utiliser env -i\n", 51);
+		exit(84);
+	}
 	i = 0;
+	a = 0;
 	while (ae[i] != NULL)
 	{
 		if (my_strcmp(ae[i], "TERM=") == 0)
+		{
 			setupterm(ae[i] + 5, 1, NULL);
+			a = 1;
+		}
 		i += 1;
+	}
+	if (a == 0)
+	{
+		write(2, "Impossible de trouver le Terminal\n", 34);
+		exit(84);
 	}
 }

@@ -33,6 +33,12 @@ t_all		*set_default()
 	all->my_key_right = tigetstr("kcuf1");
 	all->key_turn = tigetstr("kcuu1");
 	all->key_drop = tigetstr("kcud1");
+	if (all->my_key_left == NULL || all->my_key_right == NULL ||
+		 all->key_turn == NULL || all->key_drop == NULL)
+		 {
+			write(2, "Impossible de trouver les séquences de touches\n", 47);
+		 	exit(84);
+		}
 	all->key_quit = "q";
 	all->key_pause = " ";
 	all->enable_next = 1;

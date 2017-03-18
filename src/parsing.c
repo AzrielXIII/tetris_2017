@@ -90,7 +90,7 @@ t_tetrimino		*parsing_tetrimino(char *path)
 	brick->shape = malloc(sizeof(char *) * (brick->height + 1));
 	while ((str = get_next_line(fd)) != NULL)
 	{
-		if (i + 1 > brick->height | my_strlen(str) - space_counter(str)
+		if (i + 1 > brick->height || my_strlen(str) - space_counter(str)
 		 > brick->width)
 			return (NULL);
 		brick->shape[i] = create_space(str, brick->width);
