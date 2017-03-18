@@ -5,34 +5,38 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Thu Mar 16 18:05:25 2017 Thomas Dominé
+## Last update Fri Mar 17 18:17:17 2017 Thomas Dominé
 ##
 CC			=	gcc
 
-SRC			=	src/main.c				\
-				src/term.c				\
-				src/debug.c				\
-				src/score.c				\
-				src/analys.c			\
-				src/debug2.c			\
-				src/params.c			\
-				src/params2.c			\
-				src/params3.c			\
-				src/parsing.c			\
-				src/display.c			\
-				src/params4.c			\
-				src/params5.c			\
-				src/parsing2.c			\
-				src/parsing3.c			\
-				src/tab_game.c			\
-				src/tetrimino.c			\
-				src/print_game.c		\
-				src/tetrimino2.c		\
-				src/color_init.c		\
-				src/my_get_nbr.c		\
-				src/print_x_to_x.c		\
-				src/print_y_to_y.c		\
-				src/tab_integration.c
+SRC			=	src/main.c					\
+				src/term.c					\
+				src/debug.c					\
+				src/score.c					\
+				src/analys.c				\
+				src/debug2.c				\
+				src/params.c				\
+				src/params2.c				\
+				src/params3.c				\
+				src/parsing.c				\
+				src/display.c				\
+				src/params4.c				\
+				src/params5.c				\
+				src/parsing2.c				\
+				src/parsing3.c				\
+				src/tab_game.c				\
+				src/tetrimino.c				\
+				src/print_game.c			\
+				src/tetrimino2.c			\
+				src/color_init.c			\
+				src/my_get_nbr.c			\
+				src/select_color.c			\
+				src/print_x_to_x.c			\
+				src/print_y_to_y.c			\
+				src/select_letter.c			\
+				src/next_tetrimino.c		\
+				src/tab_integration.c		\
+				src/tetrimino_coloration.c
 
 OBJ			=	$(SRC:.c=.o)
 
