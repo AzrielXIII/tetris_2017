@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Mar 18 13:57:14 2017 Thomas Dominé
-** Last update Sat Mar 18 21:35:47 2017 Thomas Dominé
+** Last update Sat Mar 18 21:49:48 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -44,7 +44,7 @@ void		move_down(t_data *data, int i)
 	}
 }
 
-/*void		down_tetrimino(t_data *data, t_all *all)
+void		down_tetrimino(t_data *data, t_all *all)
 {
 	int		i;
 	int		t;
@@ -64,9 +64,9 @@ void		move_down(t_data *data, int i)
 		else
 		move_down(data, i);
 	}
-}*/
+}
 
-void		down_tetrimino(t_data *data, t_all *all)
+/*void		down_tetrimino(t_data *data, t_all *all)
 {
 	int		i;
 	int		t;
@@ -88,4 +88,4 @@ void		down_tetrimino(t_data *data, t_all *all)
 	else
 	move_down(data, i);
 	}
-}
+}*/

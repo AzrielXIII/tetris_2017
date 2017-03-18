@@ -5,7 +5,7 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Sat Mar 18 21:30:10 2017 Thomas Dominé
+## Last update Sat Mar 18 22:01:38 2017 Thomas Dominé
 ##
 CC			=	gcc
 
@@ -27,6 +27,8 @@ SRC			=	src/main.c					\
 				src/parsing3.c				\
 				src/tab_game.c				\
 				src/tetrimino.c				\
+				src/move_left.c				\
+				src/move_right.c			\
 				src/print_game.c			\
 				src/tetrimino2.c			\
 				src/color_init.c			\
