@@ -5,7 +5,7 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Sat Mar 18 11:27:38 2017 Thomas Dominé
+## Last update Sat Mar 18 15:24:12 2017 Thomas Dominé
 ##
 CC			=	gcc
 
@@ -34,7 +34,10 @@ SRC			=	src/main.c					\
 				src/verif_screen.c			\
 				src/select_letter.c			\
 				src/next_tetrimino.c		\
+				src/down_tetrimino.c		\
+				src/verif_char_down.c		\
 				src/tab_integration.c		\
+				src/identification_char.c	\
 				src/tetrimino_coloration.c
 
 OBJ			=	$(SRC:.c=.o)

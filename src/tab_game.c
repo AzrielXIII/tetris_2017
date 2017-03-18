@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Mon Mar 13 11:21:35 2017 Thomas Dominé
-** Last update Sat Mar 18 10:59:07 2017 Thomas Dominé
+** Last update Sat Mar 18 15:45:26 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -68,6 +68,6 @@ void	tab_game(t_data *data, t_all *all)
 	data->game = tab_integration(data->game, data->current->shape, 0,
 		all->size_width - data->current->width);
 	tetrimino_coloration(data, data->current);
-	print_game(data, all);
+	//down_tetrimino(data, all);
 	next_tetrimino(data, all);
 }

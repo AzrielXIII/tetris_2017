@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Sat Mar 18 11:18:45 2017 Thomas Dominé
+** Last update Sat Mar 18 15:23:50 2017 Thomas Dominé
 */
 
 #include <time.h>
@@ -134,8 +134,9 @@ void		color_init();
 char		analys(char c);
 int			select_color(char c);
 int			my_get_nbr_v3(char *str);
+int			identification_char(char c);
 char		select_letter(int nb_color);
-void		next_tetrimino(t_data *data, t_all *all);
+int			verif_char_down(t_data *data);
 void		score(t_data *data, t_all *all);
 void		tab_game(t_data *data, t_all *all);
 void		print_x_to_x(int x1, int x2, int y);
@@ -143,4 +144,6 @@ void		print_y_to_y(int y1, int y2, int x);
 void		print_game(t_data *data, t_all *all);
 void		verif_screen(t_data *data, t_all *all);
 void		display(t_all *all, t_list *tetrimino);
+void		next_tetrimino(t_data *data, t_all *all);
+void		down_tetrimino(t_data *data, t_all *all);
 void		tetrimino_coloration(t_data *data, t_tetrimino *tet);
