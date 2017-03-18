@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Sat Mar 18 09:31:36 2017 Thomas Dominé
+** Last update Sat Mar 18 10:14:00 2017 Thomas Dominé
 */
 
 #include <time.h>
@@ -135,7 +135,7 @@ char		analys(char c);
 int			select_color(char c);
 int			my_get_nbr_v3(char *str);
 char		select_letter(int nb_color);
-void		next_tetrimino(t_data *data);
+void		next_tetrimino(t_data *data, t_all *all);
 void		score(t_data *data, t_all *all);
 void		print_x_to_x(int x1, int x2, int y);
 void		print_y_to_y(int y1, int y2, int x);

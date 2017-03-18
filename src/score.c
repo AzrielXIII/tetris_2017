@@ -5,22 +5,25 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Wed Mar  1 15:22:30 2017 Thomas Dominé
-** Last update Mon Mar 13 11:21:52 2017 Thomas Dominé
+** Last update Sat Mar 18 10:59:28 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
 
-void		print_sec(int	sec, t_data *data)
+void		print_sec(int	sec, t_data *data, t_all *all)
 {
 	if (sec < 60)
 	{
 		if (sec < 10)
 		{
-			mvprintw(9, 15, "0");
-			mvprintw(9, 16, "%i", sec);
+			mvprintw((LINES / 2 - (all->size_height / 2 - 4)),
+				COLS / 2 - (all->size_width + 17) + 10, "0");
+			mvprintw((LINES / 2 - (all->size_height / 2 - 4)),
+				COLS / 2 - (all->size_width + 17) + 11, "%i", sec);
 		}
 		else
-		mvprintw(9, 15, "%i", sec);
+		mvprintw((LINES / 2 - (all->size_height / 2 - 4)),
+			COLS / 2 - (all->size_width + 17) + 10, "%i", sec);
 	}
 	else
 	{
@@ -29,34 +32,44 @@ void		print_sec(int	sec, t_data *data)
 	}
 }
 
-void		timer(t_data *data)
+void		timer(t_data *data, t_all *all)
 {
 	int		sec;
 
 	sec = time(NULL) - data->time;
-	mvprintw(9, 5, "Time: ");
+	mvprintw((LINES / 2 - (all->size_height / 2 - 4)),
+	COLS / 2 - (all->size_width + 17), "Time: ");
 	if (data->min < 10)
 	{
-		mvprintw(9, 12, "0");
-		mvprintw(9, 13, "%i", data->min);
+		mvprintw((LINES / 2 - (all->size_height / 2 - 4)),
+			COLS / 2 - (all->size_width + 17) + 7, "0");
+		mvprintw((LINES / 2 - (all->size_height / 2 - 4)),
+			COLS / 2 - (all->size_width + 17) + 8, "%i", data->min);
 	}
 	else
-	mvprintw(9, 12, "%i", data->min);
-	mvprintw(9, 14, ": ");
-	print_sec(sec, data);
+	mvprintw((LINES / 2 - (all->size_height / 2 - 4)),
+		COLS / 2 - (all->size_width + 17) + 7, "%i", data->min);
+	mvprintw((LINES / 2 - (all->size_height / 2 - 4)),
+		COLS / 2 - (all->size_width + 17) + 9, ": ");
+	print_sec(sec, data, all);
 }
 
 void		score(t_data *data, t_all *all)
 {
 	WINDOW *boite;
 	color_init();
-	attron(COLOR_PAIR(9));
-	boite = subwin(stdscr, 7, 16, 4, 4);
+	attron(COLOR_PAIR(12));
+	boite = subwin(stdscr, 7, 16, LINES / 2 - (all->size_height / 2 + 1),
+		COLS / 2 - (all->size_width + 18));
 	box(boite, ACS_VLINE, ACS_HLINE);
-	attroff(COLOR_PAIR(9));
-	mvprintw(5, 5, "Score: ");
-	mvprintw(5, 12, "%i", data->score);
-	mvprintw(7, 5, "Level: ");
-	mvprintw(7, 12, "%i", all->level);
-	timer(data);
+	attroff(COLOR_PAIR(12));
+	mvprintw(LINES / 2 - (all->size_height / 2),
+	COLS / 2 - (all->size_width + 17), "Score: ");
+	mvprintw(LINES / 2 - (all->size_height / 2),
+	COLS / 2 - (all->size_width + 17) + 7, "%i", data->score);
+	mvprintw(LINES / 2 - (all->size_height / 2 - 2),
+	COLS / 2 - (all->size_width + 17), "Level: ");
+	mvprintw(LINES / 2 - (all->size_height / 2 - 2),
+	COLS / 2 - (all->size_width + 17) + 7, "%i", all->level);
+	timer(data, all);
 }
