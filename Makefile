@@ -5,7 +5,7 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Fri Mar 17 18:17:17 2017 Thomas Dominé
+## Last update Sat Mar 18 11:27:38 2017 Thomas Dominé
 ##
 CC			=	gcc
 
@@ -31,8 +31,7 @@ SRC			=	src/main.c					\
 				src/color_init.c			\
 				src/my_get_nbr.c			\
 				src/select_color.c			\
-				src/print_x_to_x.c			\
-				src/print_y_to_y.c			\
+				src/verif_screen.c			\
 				src/select_letter.c			\
 				src/next_tetrimino.c		\
 				src/tab_integration.c		\

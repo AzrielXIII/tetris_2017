@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Sat Mar 18 10:53:56 2017 Thomas Dominé
+** Last update Sat Mar 18 11:19:57 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -28,6 +28,7 @@ void		all_while(t_data *data, t_all *all, t_list *tetrimino)
 		}
 		score(data, all);
 		tab_game(data, all);
+		verif_screen(data, all);
 		refresh();
 		sleep(1);
 	}

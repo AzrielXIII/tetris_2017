@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Fri Mar 17 17:10:02 2017 Thomas Dominé
-** Last update Sat Mar 18 11:02:48 2017 Thomas Dominé
+** Last update Sat Mar 18 11:22:51 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -35,7 +35,7 @@ void 		frame_next(t_data *data, t_all *all)
 
 	attron(COLOR_PAIR(9));
 	boite = subwin(stdscr, data->next_tet->height + 4,
-	data->next_tet->width * 1 + 4, LINES / 2 - (all->size_height / 2 + 1),
+	data->next_tet->width + 4, LINES / 2 - (all->size_height / 2 + 1),
 	COLS / 2 + (all->size_width + 2));
 	box(boite, ACS_VLINE, ACS_HLINE);
 	attroff(COLOR_PAIR(9));
