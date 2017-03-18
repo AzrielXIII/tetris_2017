@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:40:49 2017 Mohan Grewis
-** Last update Sat Mar 18 14:53:49 2017 Mohan Grewis
+** Last update Sat Mar 18 15:37:35 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -57,10 +57,7 @@ int					main(int ac, char **av, char **ae)
 {
 	t_list			*tetrimino;
 	t_all			*all;
-	struct termios	old;
-	struct termios	new;
 
-	set_read(&old, &new);
 	srand(time(NULL));
 	setup_term(ae);
 	tetrimino = tetrimino_collector("tetriminos");
@@ -69,6 +66,4 @@ int					main(int ac, char **av, char **ae)
 	if (all->debug == 1)
 		debug(all, tetrimino, av, 0);
 	display(all, tetrimino);
-	my_printf("test");
-	unset_read(&old);
 }

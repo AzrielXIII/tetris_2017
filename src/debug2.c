@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Tue Mar  7 12:42:46 2017 Mohan Grewis
-** Last update Sat Mar 18 14:26:24 2017 Mohan Grewis
+** Last update Sat Mar 18 15:41:49 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -80,10 +80,14 @@ int		last_char_in_string(char *str)
 void		wait_char()
 {
 	char	str[256];
+	struct termios	old;
+	struct termios	new;
 
+	set_read(&old, &new);
 	str[0] = '\0';
 	while (str[0] == '\0')
 	{
 		read(0, str, 256);
 	}
+	unset_read(&old);
 }
