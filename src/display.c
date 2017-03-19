@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Sun Mar 19 14:04:51 2017 Thomas Dominé
+** Last update Sun Mar 19 14:36:45 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -48,8 +48,6 @@ void			all_while(t_data *data, t_all *all, t_list *tetrimino)
 	i = 0;
 	bol = 0;
 	data->list = tetrimino;
-	data->end = 1;
-	data->time_down = time(NULL);
 	while (i != 1)
 	{
 		buff_cleaner(buff);
@@ -64,6 +62,8 @@ void			all_while(t_data *data, t_all *all, t_list *tetrimino)
 		score(data, all);
 		tab_game(data, all);
 		verif_screen(data, all);
+		if (data->loose ==  1)
+		i = 1;
 		refresh();
 	}
 }
@@ -87,6 +87,9 @@ void			display(t_all *all, t_list *tetrimino)
 	data->time = time(NULL);
 	data->min = 0;
 	data->temp_down = 0;
+	data->loose = 0;
+	data->time_down = time(NULL);
+	data->end = 1;
 	memories_game(data, all);
 	init_tab(data, all);
 	all_while(data, all, tetrimino);

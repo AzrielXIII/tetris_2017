@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Mon Mar 13 11:21:35 2017 Thomas Dominé
-** Last update Sun Mar 19 10:43:04 2017 Mohan Grewis
+** Last update Sun Mar 19 18:40:44 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -30,13 +30,18 @@ void	tab_game(t_data *data, t_all *all)
 	print_next(data, all);
 	if (data->end == 1)
 	{
+		delet_line(data);
 		next_tetrimino(data, all);
 		miniaturisation(data);
+		if (verif_char_loose(data) == 1)
+		data->loose = 1;
 		data->game = tab_integration(data->game, data->current->shape, 0,
 			all->size_width - data->current->width);
 		data->end = 0;
-		delet_line(data);
 	}
-	print_game(data, all);
-	down_tetrimino(data, all);
+	if (data->loose == 0)
+	{
+		print_game(data, all);
+		down_tetrimino(data, all);
+	}
 }

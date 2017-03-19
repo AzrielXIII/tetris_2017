@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Sun Mar 19 14:03:22 2017 Thomas Dominé
+** Last update Sun Mar 19 14:39:05 2017 Thomas Dominé
 */
 
 #include <time.h>
@@ -68,6 +68,7 @@ typedef	struct	s_data
 	int		end;
 	int		time_down;
 	int		temp_down;
+	int		loose;
 	t_tetrimino	*next_tet;
 	t_tetrimino	*current;
 	t_list		*list;
@@ -151,6 +152,8 @@ void		miniaturisation(t_data *data);
 int			verif_char_down(t_data *data);
 int			verif_char_left(t_data *data);
 int			verif_char_right(t_data *data);
+int			verif_char_loose(t_data *data);
+int			identification_char_min(char c);
 void		score(t_data *data, t_all *all);
 void		tab_game(t_data *data, t_all *all);
 void		init_tab(t_data *data, t_all *all);

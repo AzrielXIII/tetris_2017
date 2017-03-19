@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Mar 18 14:36:14 2017 Thomas Dominé
-** Last update Sun Mar 19 14:17:18 2017 Thomas Dominé
+** Last update Sun Mar 19 14:34:44 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -86,6 +86,20 @@ int			verif_char_right(t_data *data)
 			}
 			p += 1;
 		}
+		i += 1;
+	}
+	return (0);
+}
+
+int			verif_char_loose(t_data *data)
+{
+	int		i;
+
+	i = 0;
+	while (data->game[0][i] != '\0')
+	{
+		if (identification_char_min(data->game[0][i]) != 0)
+		return (1);
 		i += 1;
 	}
 	return (0);
