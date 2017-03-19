@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Mar 18 21:56:59 2017 Thomas Dominé
-** Last update Sat Mar 18 22:01:07 2017 Thomas Dominé
+** Last update Sun Mar 19 10:43:07 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -26,7 +26,7 @@ void		move_right(t_data *data, t_all *all)
 	int		p;
 
 	i = 0;
-	if (verif_char_right(data) == 0 && getch() == 'd')
+	if (verif_char_right(data) == 0)
 	{
 		while (data->game[i] != NULL)
 		{

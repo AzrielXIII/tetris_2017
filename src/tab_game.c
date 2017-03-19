@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Mon Mar 13 11:21:35 2017 Thomas Dominé
-** Last update Sat Mar 18 22:22:51 2017 Thomas Dominé
+** Last update Sun Mar 19 10:43:04 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -39,6 +39,4 @@ void	tab_game(t_data *data, t_all *all)
 	}
 	print_game(data, all);
 	down_tetrimino(data, all);
-	move_left(data, all);
-	move_right(data, all);
 }

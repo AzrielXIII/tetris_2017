@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Sat Mar 18 21:24:37 2017 Thomas Dominé
+** Last update Sun Mar 19 11:09:51 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -26,10 +26,15 @@ int			my_strcmpv2(char *str1, char *str2)
 	return (-1);
 }
 
-int			key_use(char *buff, t_all *all)
+int			key_use(char *buff, t_all *all, t_data *data)
 {
 	if (my_strcmpv2(buff, all->key_quit) == 0)
 		return (1);
+	else if (my_strcmpv2(buff, all->my_key_left) == 0)
+		move_left(data, all);
+	else if (my_strcmpv2(buff, all->my_key_right) == 0)
+		move_right(data, all);
+	return (0);
 }
 
 void			all_while(t_data *data, t_all *all, t_list *tetrimino)
@@ -45,8 +50,9 @@ void			all_while(t_data *data, t_all *all, t_list *tetrimino)
 	data->time_down = time(NULL);
 	while (i != 1)
 	{
+		buff_cleaner(buff);
 		read(0, buff, 256);
-		i = key_use(buff, all);
+		i = key_use(buff, all, data);
 		clear();
 		if (bol == 0)
 		{
@@ -70,6 +76,7 @@ void			display(t_all *all, t_list *tetrimino)
 
 	initscr();
 	set_read(&old, &new);
+	set_pav_num();
 	curs_set(0);
 	i = 0;
 	bol = 0;

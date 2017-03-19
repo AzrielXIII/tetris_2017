@@ -5,7 +5,7 @@
 ## Login   <mohan.grewis@epitech.eu>
 ##
 ## Started on  Mon Jan 30 10:10:46 2017 Mohan Grewis
-## Last update Sat Mar 18 22:22:42 2017 Thomas Dominé
+## Last update Sun Mar 19 11:10:19 2017 Mohan Grewis
 ##
 CC			=	gcc
 
@@ -36,6 +36,7 @@ SRC			=	src/main.c					\
 				src/delet_line.c			\
 				src/print_next.c			\
 				src/verif_char.c			\
+				src/buff_cleaner.c			\
 				src/select_color.c			\
 				src/verif_screen.c			\
 				src/select_letter.c			\

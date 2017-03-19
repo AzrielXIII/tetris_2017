@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Sat Mar 18 11:23:19 2017 Mohan Grewis
-** Last update Sat Mar 18 15:33:11 2017 Mohan Grewis
+** Last update Sun Mar 19 11:02:18 2017 Mohan Grewis
 */
 
 #include "../include/my.h"
@@ -24,4 +24,18 @@ void 	set_read(struct termios *old, struct termios *new)
 void 	unset_read(struct termios *old)
 {
 	ioctl(0, TCSETS, old);
+}
+
+void 		set_pav_num()
+{
+	char	*s;
+
+	s = tigetstr("smkx");
+	if (s == NULL)
+	{
+		write(2, "Impossible de trouver smkx\n", 27);
+		exit(84);
+	}
+	else
+	my_printf("%s", s);
 }

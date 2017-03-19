@@ -5,11 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-<<<<<<< HEAD
-** Last update Sat Mar 18 15:23:50 2017 Thomas Dominé
-=======
-** Last update Sat Mar 18 15:04:55 2017 Mohan Grewis
->>>>>>> master
+** Last update Sun Mar 19 11:09:17 2017 Mohan Grewis
 */
 
 #include <time.h>
@@ -85,6 +81,7 @@ typedef struct	s_flags
 }				t_flags;
 
 void		wait_char();
+void 		set_pav_num();
 t_all		*set_default();
 int			my_strlen(char *str);
 void 		setup_term(char **ae);
@@ -94,6 +91,7 @@ void 		print_term_key(char *key);
 int			my_printf(char *str, ...);
 char 		*str_extractor(char *str);
 char		*name_collector(char *path);
+void 		buff_cleaner(char buff[256]);
 char		*get_next_line(const int fd);
 int			count_tetrimino(t_list *list);
 t_tetrimino	*parsing_tetrimino(char *path);
