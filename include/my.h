@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Sun Mar 19 11:09:17 2017 Mohan Grewis
+** Last update Sun Mar 19 14:03:22 2017 Thomas Dominé
 */
 
 #include <time.h>
@@ -165,4 +165,5 @@ void		display(t_all *all, t_list *tetrimino);
 void		memories_game(t_data *data, t_all *all);
 void		next_tetrimino(t_data *data, t_all *all);
 void		down_tetrimino(t_data *data, t_all *all);
+void		down_tetrimino_fast(t_data *data, t_all *all);
 void		tetrimino_coloration(t_data *data, t_tetrimino *tet);

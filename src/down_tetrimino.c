@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Mar 18 13:57:14 2017 Thomas Dominé
-** Last update Sun Mar 19 13:57:53 2017 Mohan Grewis
+** Last update Sun Mar 19 14:03:04 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -66,7 +66,7 @@ void		down_tetrimino(t_data *data, t_all *all)
 	}
 }
 
-/*void		down_tetrimino(t_data *data, t_all *all)
+void		down_tetrimino_fast(t_data *data, t_all *all)
 {
 	int		i;
 	int		t;
@@ -76,10 +76,8 @@ void		down_tetrimino(t_data *data, t_all *all)
 	t = 0;
 	coef = 20000;
 	i = count(data);
-	//t = time(NULL) - data->time_down;
 	if (clock() / coef >= 1 + t / coef && (t = clock()))
 	{
-	//tem += 1;
 	if (verif_char_down(data) == 1)
 	{
 		data->end = 1;
@@ -88,4 +86,4 @@ void		down_tetrimino(t_data *data, t_all *all)
 	else
 	move_down(data, i);
 	}
-}*/
+}

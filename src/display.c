@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Sun Mar 19 11:09:51 2017 Mohan Grewis
+** Last update Sun Mar 19 14:04:51 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -34,6 +34,8 @@ int			key_use(char *buff, t_all *all, t_data *data)
 		move_left(data, all);
 	else if (my_strcmpv2(buff, all->my_key_right) == 0)
 		move_right(data, all);
+	else if (my_strcmpv2(buff, all->key_drop) == 0)
+		down_tetrimino_fast(data, all);
 	return (0);
 }
 
