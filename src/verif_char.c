@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Mar 18 14:36:14 2017 Thomas Dominé
-** Last update Sat Mar 18 21:54:11 2017 Thomas Dominé
+** Last update Sun Mar 19 14:17:18 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -77,7 +77,8 @@ int			verif_char_right(t_data *data)
 		{
 			if (identification_char(data->game[i][p]))
 			{
-				if (data->game[i][p + 1] == '\0' || data->game[i][p + 1] == 'r' ||
+				if (data->game[i][p + 1] == '\0' ||
+				data->game[i][p + 1] == 'r' ||
 				data->game[i][p + 1] == 'g' || data->game[i][p + 1] == 'y'
 				|| data->game[i][p + 1] == 'b' || data->game[i][p + 1] == 'm'
 				|| data->game[i][p + 1] == 'c')
