@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Feb 25 15:46:57 2017 Thomas Dominé
-** Last update Sun Mar 19 14:36:45 2017 Thomas Dominé
+** Last update Mon Mar 20 10:14:34 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -38,16 +38,18 @@ int			key_use(char *buff, t_all *all, t_data *data)
 		down_tetrimino_fast(data, all);
 	return (0);
 }
+//else if (my_strcmpv2(buff, all->key_turn) == 0)
+//rotation(data);
 
 void			all_while(t_data *data, t_all *all, t_list *tetrimino)
 {
 	int		i;
 	int		bol;
 	char	buff[256];
-
 	i = 0;
 	bol = 0;
 	data->list = tetrimino;
+	data->rotate = 0;
 	while (i != 1)
 	{
 		buff_cleaner(buff);

@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Mar 18 20:11:40 2017 Thomas Dominé
-** Last update Sat Mar 18 20:16:11 2017 Thomas Dominé
+** Last update Mon Mar 20 15:24:22 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -18,7 +18,7 @@ void		memories_game(t_data *data, t_all *all)
 
 	i = 0;
 	line = all->size_height;
-	column = all->size_width * 4;
+	column = all->size_width * 2;
 	data->game = malloc(sizeof(char *) * (line + 1));
 	data->game[line] = NULL;
 	while (i < line)

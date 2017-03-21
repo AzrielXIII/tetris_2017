@@ -5,7 +5,7 @@
 ** Login   <mohan.grewis@epitech.eu>
 **
 ** Started on  Wed Feb 15 10:41:45 2017 Mohan Grewis
-** Last update Sun Mar 19 14:39:05 2017 Thomas Dominé
+** Last update Sun Mar 19 19:53:56 2017 Thomas Dominé
 */
 
 #include <time.h>
@@ -69,6 +69,7 @@ typedef	struct	s_data
 	int		time_down;
 	int		temp_down;
 	int		loose;
+	int		rotate;
 	t_tetrimino	*next_tet;
 	t_tetrimino	*current;
 	t_list		*list;
@@ -144,6 +145,7 @@ int			key_right_set_short(t_all *all, t_list *list,
 void		color_init();
 char		analys(char c);
 int			select_color(char c);
+void		rotation(t_data *data);
 void		delet_line(t_data *data);
 int			my_get_nbr_v3(char *str);
 int			identification_char(char c);

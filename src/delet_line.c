@@ -5,7 +5,7 @@
 ** Login   <thomas.domine-@epitech.eu>
 **
 ** Started on  Sat Mar 18 22:04:36 2017 Thomas Dominé
-** Last update Sun Mar 19 18:48:16 2017 Thomas Dominé
+** Last update Tue Mar 21 15:06:52 2017 Thomas Dominé
 */
 
 #include "../include/my.h"
@@ -19,9 +19,9 @@ int			verif_line_complete(char *str)
 	bol = 0;
 	while (str[i] != '\0')
 	{
-		i += 1;
 		if (str[i] == ' ')
 		bol = 1;
+		i += 1;
 	}
 	return (bol);
 }
